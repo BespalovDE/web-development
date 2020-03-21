@@ -1,0 +1,166 @@
+.main_block
+{
+     margin: 0 auto;
+     width: 1000px;
+     height: 100vh;
+     background: #fff; /* Цвет фона */
+}
+
+.top_block
+{
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 1000px;
+    height: 350px;
+    background: #fff; /* Цвет фона */
+} 
+
+.photo
+{
+    float: left; /* Обтекание по правому краю */
+    background: #fff; /* Цвет фона */
+    margin-left: 20px; /* Отступ справа */
+    width:330px;
+    height: 350px; 
+}
+
+blockquote 
+{
+    display: block;
+    margin-top: 80px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+    color: #808080;
+    font: 28px/1.5 Georgia, Arial;
+    font-style: italic;
+}
+
+.autorPhrase
+{
+    font-weight: bold;
+    color: #000;
+    font-style: normal;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.favInfo
+{
+    float: left; /* Обтекание по правому краю */
+    background: #fff; /* Цвет фона */
+    margin-left: 20px; /* Отступ справа */
+    width:330px;
+    margin-top: 0px; 
+}
+
+.spisok
+{
+    font-size: 19px;
+    font-family: Georgia,Verdana;
+    color: #555;
+    line-height: 1.5;
+    margin-top: 0px; 
+}
+
+.info
+{
+    width: 570px;
+    height: 0 auto;
+    float: right; 
+    background: #fff;
+    margin-left: 20px; 
+    margin-right: 20px; 
+}
+
+h1
+{
+    font-size: 48px;
+    font-family: 'Open Sans', sans-serif, Verdana;
+    color: #000;
+    line-height: 1.5;
+    font-weight: 700; 
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+h2
+{
+    font-size: 36px;
+    font-family: 'Open Sans', sans-serif, Verdana;
+    color: #000;
+    line-height: 1.5;
+    font-weight: 700; 
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.favouriteHead
+{
+    font-size: 24px;
+    margin-bottom: 10px; 
+    font-family: 'Open Sans', sans-serif, Verdana;
+    color: #15a927;
+    line-height: 1.5;
+}
+
+.lineBlock
+{
+    width:60px;
+    height: 6px;
+    background: #15a927;
+    border-radius: 5px;
+}
+
+.quote
+{
+    width: 570px;
+    height: 350px;
+    float: right; 
+    background-image: url('../images/comma.png');
+    background-repeat: no-repeat;
+    background-size: 0px 0px;
+    position: relative;
+    margin-right: 20px; 
+    margin-top: 50px;
+}
+
+.quote:before 
+{
+    content: "";
+    display: block;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: inherit;
+    background-size: 150px 92px;
+    opacity: 0.05;
+}
+
+.Arrow
+{
+    color: #15a927; 
+    display: block;
+    position: relative;
+}
+
+.Arrow:after
+{
+    content: ' →';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 90px;
+}
+
+.marginTop20
+{
+    margin-top: 20px;
+}
+
+.marginTop40
+{
+    margin-top: 40px;
+}
