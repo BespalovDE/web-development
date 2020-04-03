@@ -1,0 +1,89 @@
+.movies
+{
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 1200px;
+    margin-bottom: 50px;
+}
+
+h3
+{
+    font-size: 36px;
+    line-height: 42px;
+    color: #333;
+    font-family: 'Open Sans', sans-serif, Verdana;
+    font-weight: 400;
+}
+
+.movies_block
+{
+    margin-top: 40px; 
+    display: table-cell;
+}
+
+.movie
+{
+    margin-top: 10px; 
+    width: 285px;
+    height: 0 auto;
+    float: left;
+}
+
+.movie h4
+{
+    font-size: 22px;
+    line-height: 32px;
+    color: #333333;
+    font-family: 'Open Sans', sans-serif, Verdana;
+    font-weight: 700;
+    margin-top: 19px;
+    margin-bottom: 18px;
+}
+
+.movie p
+{
+    font-size: 16px;
+    line-height: 28px;
+    color: #555555;
+    font-family: Georgia, sans-serif, Verdana;  
+}
+
+.leftMovie
+{
+    margin-left: 20px;
+}
+
+.movieButton
+{
+    margin-top: 37px;
+    font-size: 19px;
+    line-height: 32px;
+    color: #f5f5f5;
+    font-family: Georgia, sans-serif, Verdana;  
+    width: 220px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #15a98c;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translate(-55%, 0);
+}
+
+.movieButton :hover
+{
+    background-color: #098d71;
+}
+
+.moviePicture
+{
+    width:285px;
+    height: 190px; 
+    border-radius: 5px;
+}
+
+.marginBottom16 /*добавление к h2 для заголовка Любимые фильмы*/
+{
+    margin-bottom: 22px;
+    font-stretch: expanded;
+}
