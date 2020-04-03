@@ -59,8 +59,14 @@ blockquote
     font-size: 19px;
     font-family: Georgia,Verdana;
     color: #555;
-    line-height: 1.5;
-    margin-top: 0px; 
+    line-height: 36px;
+    margin-top: 12px; 
+    padding-left: 20px;
+}
+
+.spisok2
+{
+    padding-left: 18px;
 }
 
 .info
@@ -77,31 +83,33 @@ h1
 {
     font-size: 48px;
     font-family: 'Open Sans', sans-serif, Verdana;
-    color: #000;
+    color: #333;
     line-height: 1.5;
     font-weight: 700; 
     margin-top: 0px;
-    margin-bottom: 0px;
+    margin-bottom: 19px;
 }
 
 h2
 {
     font-size: 36px;
     font-family: 'Open Sans', sans-serif, Verdana;
-    color: #000;
-    line-height: 1.5;
-    font-weight: 700; 
+    color: #333;
+    line-height: 42px;
+    font-weight: 400; 
     margin-top: 0px;
-    margin-bottom: 0px;
+    margin-bottom: 16px;
 }
 
 .favouriteHead
 {
-    font-size: 24px;
+    font-size: 22px;
     margin-bottom: 10px; 
     font-family: 'Open Sans', sans-serif, Verdana;
-    color: #15a927;
-    line-height: 1.5;
+    color: #15a98c;
+    line-height: 32px;
+    font-weight: 600;
+    font-stretch: expanded;
 }
 
 .lineBlock
@@ -110,6 +118,7 @@ h2
     height: 6px;
     background: #15a927;
     border-radius: 5px;
+    margin-top: 0px;
 }
 
 .quote
@@ -141,7 +150,11 @@ h2
 
 .Arrow
 {
-    color: #15a927; 
+    margin-top: 40px;
+    font-size: 19px;
+    line-height: 32px;
+    color: #15a98b;
+    font-family: Georgia, Verdana;
     display: block;
     position: relative;
 }
@@ -152,15 +165,24 @@ h2
     display: block;
     position: absolute;
     top: 0;
-    left: 90px;
+    left: 120px;
 }
 
-.marginTop20
+.marginTop45
 {
-    margin-top: 20px;
+    margin-top: 45px;
 }
 
 .marginTop40
 {
-    margin-top: 40px;
+    margin-top: 42px;
+}
+
+.aboutMe
+{
+    font-size: 19px;
+    line-height: 32px;
+    color: #555555;
+    font-family: Georgia, Verdana;
+    padding-left: 0px;
 }
