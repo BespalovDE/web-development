@@ -1,18 +1,16 @@
-let n = 0
-
 function isPrimeNumber(n) {
   if (typeof n == "number") {
-    isPrime1Number(n);
-  } else if ((typeof n == "object") && Array.isArray(n) ){
+    PrimeResult(n);
+  } else if (Array.isArray(n)) {
     for (let i in n) {
-      isPrime1Number( n[i] );
+      PrimeResult( n[i] );
     }   
   } else {
     console.log('not correct data!');
   }
 }
 
-function isPrime1Number(n) {
+function PrimeResult(n) {
   let isPrime = true
     
   if ((n != null) && (typeof n == "number")) {
@@ -23,14 +21,13 @@ function isPrime1Number(n) {
           break
         }
       }
-      (!isPrime) 
-        ? console.log(n + ' is not prime number')
-        : console.log(n + ' is prime number'); 
-    }
-    else {
+      (isPrime) 
+        ? console.log(n + ' is prime number')
+        : console.log(n + ' is not prime number'); 
+    } else {
       console.log(n + ' is not correct value'); 
     }
   } else {
-    console.log('not correct value!')
+    console.log(n + ' not correct value!')
   }
 }
