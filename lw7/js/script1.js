@@ -1,16 +1,16 @@
 function isPrimeNumber(n) {
   if (typeof n == "number") {
-    PrimeResult(n);
+    isPrimeNumberImpl(n);
   } else if (Array.isArray(n)) {
     for (let value of n) {
-      PrimeResult(value);
+      isPrimeNumberImpl(value);
     }   
   } else {
     console.log('not correct data!');
   }
 }
 
-function PrimeResult(n) {
+function isPrimeNumberImpl(n) {
   let isPrime = true
     
   if ((n != null) && (typeof n == "number")) {
