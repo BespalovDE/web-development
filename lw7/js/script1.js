@@ -2,8 +2,8 @@ function isPrimeNumber(n) {
   if (typeof n == "number") {
     PrimeResult(n);
   } else if (Array.isArray(n)) {
-    for (let i in n) {
-      PrimeResult( n[i] );
+    for (let value of n) {
+      PrimeResult(value);
     }   
   } else {
     console.log('not correct data!');
