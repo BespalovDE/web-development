@@ -1,0 +1,238 @@
+body 
+{
+    height: 100%;
+    margin: 2px;
+}
+
+.allPage
+{
+	display: flex;
+	flex-direction: column;
+    min-height: 100%;
+}
+
+.content 
+{
+	flex: 1 0 auto;
+}
+.background_block
+{
+    background-image: url('../images/Kosmos.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: auto 400px;
+    position: relative;
+    top: 0px;
+    margin-top: 0px;
+}
+
+.main_block
+{
+     margin-top: 0px;
+     margin: 0 auto;
+     width: 1000px;
+}
+
+.top_block
+{
+    margin: 0 auto;
+    padding-top: 100px;
+    width: 1000px;
+    height: 350px;
+} 
+
+.photo
+{
+    float: left;
+    margin-left: 20px;
+    width:330px;
+    height: 350px; 
+}
+
+blockquote 
+{
+    display: block;
+    margin-top: 80px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    margin-right: 40px;
+    line-height: 42px;
+    color: #fff;
+    font: 28px/1.5 Georgia, Arial;
+    font-style: italic;
+}
+
+.autorPhrase
+{
+    font-weight: bold;
+    color: #fff;
+    font-style: normal;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.favInfo
+{
+    float: left;
+    background: #fff;
+    margin-left: 20px;
+    width:330px;
+    margin-top: 0px; 
+}
+
+.spisok
+{
+    font-size: 19px;
+    font-family: Georgia,Verdana;
+    color: #555;
+    line-height: 36px;
+    margin-top: 12px; 
+    padding-left: 20px;
+}
+
+.spisok2
+{
+    padding-left: 18px;
+}
+
+.info
+{
+    width: 570px;
+    height: 0 auto;
+    float: right; 
+    background: #fff;
+    margin-left: 20px; 
+    margin-right: 20px; 
+}
+
+h1
+{
+    font-size: 48px;
+    font-family: 'Open Sans', sans-serif, Verdana;
+    color: #333;
+    line-height: 1.5;
+    font-weight: 700; 
+    margin-top: 0px;
+    margin-bottom: 19px;
+}
+
+h2
+{
+    font-size: 36px;
+    font-family: 'Open Sans', sans-serif, Verdana;
+    color: #333;
+    line-height: 42px;
+    font-weight: 400; 
+    margin-top: 0px;
+    margin-bottom: 16px;
+}
+
+.favouriteHead
+{
+    font-size: 22px;
+    margin-bottom: 10px; 
+    font-family: 'Open Sans', sans-serif, Verdana;
+    color: #15a98c;
+    line-height: 32px;
+    font-weight: 600;
+    font-stretch: expanded;
+}
+
+.lineBlock
+{
+    width:60px;
+    height: 6px;
+    background: #15a927;
+    border-radius: 5px;
+    margin-top: 0px;
+}
+
+.quote
+{
+    width: 570px;
+    height: 350px;
+    float: right; 
+    background-image: url('../images/comma.png');
+    background-repeat: no-repeat;
+    background-size: 0px 0px;
+    position: relative;
+    margin-right: 20px; 
+    margin-top: 50px;
+}
+
+.quote:before 
+{
+    content: "";
+    display: block;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: inherit;
+    background-size: 150px 92px;
+    opacity: 0.05;
+}
+
+.Arrow
+{
+    margin-top: 40px;
+    font-size: 19px;
+    line-height: 32px;
+    color: #15a98b;
+    font-family: Georgia, Verdana;
+    display: block;
+    position: relative;
+}
+
+.Arrow:after
+{
+    content: ' →';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 120px;
+}
+
+.marginTop20
+{
+    margin-top: 10px;
+}
+
+.marginTop45
+{
+    margin-top: 45px;
+}
+
+.marginTop40
+{
+    margin-top: 42px;
+}
+
+.aboutMe
+{
+    font-size: 19px;
+    line-height: 32px;
+    color: #555555;
+    font-family: Georgia, Verdana;
+    padding-left: 0px;
+}
+
+.footer 
+{
+    margin: 0 auto;
+    height: 60px;
+    flex: 0 0 auto;
+}
+
+.footer p
+{
+    font-size: 16px;
+    line-height: 32px;
+    color: #555;
+    font-family: Georgia, Verdana;
+    line-height: 60px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+}
