@@ -21,15 +21,16 @@
     background: #fff; /* Цвет фона */
     margin-left: 20px; /* Отступ справа */
     width:330px;
+    border-radius: 5px;
     height: 350px; 
 }
 
 blockquote 
 {
     display: block;
-    margin-top: 80px;
+    margin-top: 77px;
     margin-bottom: 10px;
-    margin-left: 40px;
+    margin-left: 60px;
     margin-right: 40px;
     color: #808080;
     font: 28px/1.5 Georgia, Arial;
@@ -71,12 +72,23 @@ blockquote
 
 .info
 {
-    width: 570px;
+    /*width: 570px;
     height: 0 auto;
     float: right; 
     background: #fff;
     margin-left: 20px; 
+    margin-right: 20px; */
+
+    width: 570px;
+    float: right; 
+    background: #fff;
+    margin-left: 15px; 
     margin-right: 20px; 
+    margin-top: 0px;
+    position: relative;
+    /*top: -174px;*/
+    display: block;
+    top: -15px;
 }
 
 h1
@@ -87,7 +99,7 @@ h1
     line-height: 1.5;
     font-weight: 700; 
     margin-top: 0px;
-    margin-bottom: 19px;
+    margin-bottom: 16px;
 }
 
 h2
@@ -103,7 +115,7 @@ h2
 
 .favouriteHead
 {
-    font-size: 22px;
+    font-size: 24px;
     margin-bottom: 10px; 
     font-family: 'Open Sans', sans-serif, Verdana;
     color: #15a98c;
@@ -116,7 +128,7 @@ h2
 {
     width:60px;
     height: 6px;
-    background: #15a927;
+    background: #15a98c;
     border-radius: 5px;
     margin-top: 0px;
 }
@@ -131,7 +143,7 @@ h2
     background-size: 0px 0px;
     position: relative;
     margin-right: 20px; 
-    margin-top: 50px;
+    margin-top: 43px;
 }
 
 .quote:before 
@@ -144,7 +156,7 @@ h2
     top: 0;
     left: 0;
     background: inherit;
-    background-size: 150px 92px;
+    background-size: 130px 85px;
     opacity: 0.05;
 }
 
