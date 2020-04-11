@@ -2,32 +2,33 @@
 <html lang="ru">
   <head>
      <meta charset="utf-8">
-     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,800;1,300;1,800&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
      <link href="css/style.css" rel="stylesheet">
      <link href="css/menustyle.css" rel="stylesheet">
      <link href="css/moviesStyle.css" rel="stylesheet">
+     <link href="css/formStyle.css" rel="stylesheet">
      <title>Anket</title>
   </head>
   <body>
   <div class="allPage">
     <div class="content">
-    <div class="main_block">
+    <div class="menu_block">
       <ul class="menu-main">
         <li class = "widthLi1">
           <a href="#about">
-            <div class="aboutmeIcon"></div>
+            <span class="aboutmeIcon"></span>
             Обо мне&thinsp;
           </a>
         </li>
         <li class = "widthLi2">
           <a href="#hobby">
-            <div class="aboutmeIcon heartIcon"></div>
+            <span class="aboutmeIcon heartIcon"></span>
             Моё хобби&thinsp;
           </a>
         </li>
         <li class = "widthLi3">
           <a href="#films">
-            <div class="aboutmeIcon videoIcon"></div>
+            <span class="aboutmeIcon videoIcon"></span>
             Любимые фильмы&thinsp;
           </a>
         </li>
@@ -88,7 +89,7 @@
     <div style="clear:both"></div>
     <div class="movies">
       <a name="films"></a>
-      <h2 class = "marginBottom16">Любимые фильмы</h2>
+      <h2>Любимые фильмы</h2>
       <div class="movies_block">
         <div class="movie">
            <img src="images/lor.jpg" class="moviePicture" alt="Властелин колец">
@@ -140,6 +141,41 @@
       </div>
       <div class="clear"></div>
       <button class="movieButton">Все фильмы</button>
+    </div>
+    <div class="formBlock"> 
+      <div class="title">
+        <span>НАПИШИ МНЕ</span>
+      </div>
+      <div class="clear"></div>
+        <form action="writeme.php" method="POST" >
+          <ul class="menu-main">
+          <li><label class="label1">Ваше имя</label> <br>
+            <input type="text" class="inputField" name="username" /></li><br>
+          <li><label class="label1">Ваш email</label> <br>
+            <input type="text" class="inputField" name="email" /></li><br>
+          <li><label class="label2">Откуда вы?</label>
+            <div class="newSelectStyle"> 
+              <select name="from" class="select">
+                <OPTION value="0" selected>Не указано
+                <OPTION value="1">Россия
+                <OPTION value="2">Украина
+                <OPTION value="3">Беларусь
+                <OPTION value="4">Казахстан
+                <OPTION value="5">Средиземье
+                <OPTION value="6">Нарния
+                <OPTION value="7">Азерот
+              </select>
+            </div> 
+          </li><br>  
+          <li class="marginLi"><label class="label2">Ваш пол</label> 
+          <INPUT type="radio" class="radioButton" name="gender" id="r1" value="Yes" checked/><label class="radioLabel" for="r1">Мужской</label>
+          <INPUT type="radio" class="radioButton" name="gender" id="r2" value="No"/><label class="radioLabel" for="r2">Женский</label> </li><br>
+          <li><label class="label1">Ваше сообщение</label> <br>
+          <textarea name="message" wrap="hard"></textarea> </li><br>
+          <li><input type="submit" class="formButton" onClick="Handler" value="Отправить"></li>
+          </ul>
+        </form>
+      </div>
     </div>
     </div>
     <div class="footer">

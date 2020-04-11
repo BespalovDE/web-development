@@ -1,7 +1,7 @@
 body 
 {
     height: 100%;
-    margin: 2px;
+    margin: 0px;
 }
 
 .allPage
@@ -28,33 +28,42 @@ body
 
 .main_block
 {
-     margin-top: 0px;
+     margin-top: 50px;
      margin: 0 auto;
-     width: 1000px;
+     width: 960px;
+}
+
+.menu_block
+{
+    margin: auto;
+    margin-top: 0px;
+    width: 1000px;
 }
 
 .top_block
 {
     margin: 0 auto;
-    padding-top: 100px;
-    width: 1000px;
+    padding-top: 208px;
+    width: 960px;
     height: 350px;
+    margin-bottom: 47px;
 } 
 
 .photo
 {
     float: left;
-    margin-left: 20px;
     width:330px;
     height: 350px; 
+    border-radius: 5px;
+    margin-left: 0px;
 }
 
 blockquote 
 {
     display: block;
-    margin-top: 80px;
+    /*margin-top: 80px;*/
     margin-bottom: 10px;
-    margin-left: 0px;
+    margin-left: 20px;
     margin-right: 40px;
     line-height: 42px;
     color: #fff;
@@ -75,7 +84,6 @@ blockquote
 {
     float: left;
     background: #fff;
-    margin-left: 20px;
     width:330px;
     margin-top: 0px; 
 }
@@ -88,21 +96,33 @@ blockquote
     line-height: 36px;
     margin-top: 12px; 
     padding-left: 20px;
+    position: relative;
+    left: 5px;
 }
 
 .spisok2
 {
     padding-left: 18px;
+    left: 0px;
 }
 
 .info
 {
     width: 570px;
-    height: 0 auto;
     float: right; 
     background: #fff;
-    margin-left: 20px; 
+    margin-left: 30px; 
     margin-right: 20px; 
+    margin-top: -174px;
+    position: relative;
+    /*top: -174px;*/
+    display: block;
+    left: 15px;
+}
+
+.info::after
+{
+    position: sticky;
 }
 
 h1
@@ -113,7 +133,7 @@ h1
     line-height: 1.5;
     font-weight: 700; 
     margin-top: 0px;
-    margin-bottom: 19px;
+    margin-bottom: 16px;
 }
 
 h2
@@ -124,12 +144,13 @@ h2
     line-height: 42px;
     font-weight: 400; 
     margin-top: 0px;
+    margin-left: 1px;
     margin-bottom: 16px;
 }
 
 .favouriteHead
 {
-    font-size: 22px;
+    font-size: 24px;
     margin-bottom: 10px; 
     font-family: 'Open Sans', sans-serif, Verdana;
     color: #15a98c;
@@ -142,9 +163,10 @@ h2
 {
     width:60px;
     height: 6px;
-    background: #15a927;
+    background:#15a98c;
     border-radius: 5px;
     margin-top: 0px;
+    margin-left: 5px;
 }
 
 .quote
@@ -157,7 +179,7 @@ h2
     background-size: 0px 0px;
     position: relative;
     margin-right: 20px; 
-    margin-top: 50px;
+    /*margin-top: 50px;*/
 }
 
 .quote:before 
@@ -177,6 +199,7 @@ h2
 .Arrow
 {
     margin-top: 40px;
+    margin-left: 5px;
     font-size: 19px;
     line-height: 32px;
     color: #15a98b;
@@ -201,7 +224,7 @@ h2
 
 .marginTop45
 {
-    margin-top: 45px;
+    margin-top: 43px;
 }
 
 .marginTop40
@@ -222,6 +245,7 @@ h2
 {
     margin: 0 auto;
     height: 60px;
+    width: 1000;
     flex: 0 0 auto;
 }
 
@@ -233,6 +257,6 @@ h2
     font-family: Georgia, Verdana;
     line-height: 60px;
     margin: 0 auto;
+    margin-left: -20px;;
     text-align: center;
-    padding: 0;
 }
