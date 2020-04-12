@@ -9,16 +9,17 @@
 h3
 {
     font-size: 36px;
-    line-height: 42px;
-    color: #333;
     font-family: 'Open Sans', sans-serif, Verdana;
-    font-weight: 400;
+    color: #333;
+    line-height: 42px;
+    font-weight: 400; 
+    margin-top: 0px;
+    margin-left: 1px;
+    margin-bottom: 23px;
 }
 
 .movies_block
 {
-    margin-top: 7px; 
-    /*display: table-cell;*/
     display: inline-flex;
 }
 
@@ -49,20 +50,21 @@ h3
     font-family: Georgia, sans-serif, Verdana;  
 }
 
-.leftMovie
+.left_Movie
 {
     margin-left: 20px;
 }
 
-.movieButton
+.movie_Button
 {
+    display: block;
     margin-top: 37px;
     font-size: 19px;
     line-height: 32px;
+    text-decoration: none;
+    padding-top: 11px;
     color: #f5f5f5;
-    font-family: Georgia, sans-serif, Verdana;  
-    width: 220px;
-    height: 51px;
+    font-family: Georgia, sans-serif, Verdana;   
     border-radius: 5px;
     background-color: #15a98c;
     text-align: center;
@@ -71,14 +73,16 @@ h3
     transform: translate(-55%, 0);
     border-radius: 5px;
     border: none;
+    width: 220px;
+    height: 40px;
 }
 
-.movieButton :hover
+.movie_Button:hover
 {
     background-color: #098d71;
 }
 
-.moviePicture
+.movie_Picture
 {
     width:285px;
     height: 190px; 

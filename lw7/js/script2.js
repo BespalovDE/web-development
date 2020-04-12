@@ -23,7 +23,10 @@ function Calc(n) {
     }
     if (CheckSeparator(value)) {
       if (expression.length > 2 && value != '(') {
-        calculatIt(expression);
+        if (!calculatIt(expression)) {
+          console.log('Not correct operaton / 0'); /*некорректно расставлены скобочки*/
+          return;
+        }
       }
       if (value == '(') {
         expression.push(value);
@@ -46,7 +49,10 @@ function Calc(n) {
     } 
   }
   while (expression.length > 2 && checkCorrect(expression)) { /*дорасчет данных, оставшихся в массиве*/
-    calculatIt(expression);
+    if (!calculatIt(expression)) {
+      console.log('Not correct operaton / 0'); /*некорректно расставлены скобочки*/
+      return;
+    }
   }
   (expression.length > 1) /*в итоговом массиве больше 1го элемента ==> некорректный ввод*/
     ? console.log('Not correct expression')
@@ -110,6 +116,11 @@ function calculatIt(expression) {
       break
     case '*': expression.push( num1 * num2 )
       break
-    case '/': expression.push( num1 / num2 )
+    case '/': 
+      if (num2 != 0) {
+        expression.push( num1 / num2 );
+      } else {
+        return false;
+      }
   }
 }
