@@ -7,32 +7,39 @@ function CalcIt(n) {
 
 function Calc(n) {
   let expression = [];
-  let nowNum = ''
-
-  for (let value of n) {
-    if (CheckOperator(value)) {
-      expression.push(value);
+  let nowNum = '';
+  let i = 0;
+  
+  while (n.length > i) { /*пробегаем по строке string*/
+    if (CheckOperator( n[i] )) {
+      expression.push( n[i] );
     }  
-    if (CheckNumeric(value)) {
-      nowNum += value;
-    } else {
-      if (nowNum != '') {
-        expression.push(parseInt(nowNum));
-        nowNum = '';
+    if (CheckNumeric( n[i] )) {
+      while (CheckNumeric( n[i] ) || n[i] == '.') { /*считываем число*/
+        nowNum += n[i];
+        i++;
       }
+      if (CheckNumeric(nowNum) && nowNum.indexOf('.', nowNum.indexOf('.') + 1) < 0) { /*если float и точек не более 2*/
+        expression.push(parseFloat(nowNum));
+      } else {
+        console.log('Not correct expression'); /*присутствует некорректный ввод числа*/
+        return;
+      }
+      nowNum = '';
+      i--;
     }
-    if (CheckSeparator(value)) {
-      if (expression.length > 2 && value != '(') {
-        if (!calculatIt(expression)) {
-          console.log('Not correct operaton / 0'); /*некорректно расставлены скобочки*/
+    if (CheckSeparator( n[i] )) {
+      if (expression.length > 2 && n[i] != '(') {
+        if (calculatIt(expression)) {
+          console.log('Division by zero!'); /*Деление на ноль*/
           return;
         }
       }
-      if (value == '(') {
-        expression.push(value);
+      if (n[i] == '(') {
+        expression.push( n[i] );
       }
-      if (value == ')') {
-        if (parseInt(expression[expression.length - 1]) && expression[expression.length - 2] == '(') {
+      if (n[i] == ')') {
+        if (parseFloat(expression[expression.length - 1]) && expression[expression.length - 2] == '(') {
           nowNum = expression.pop();
           expression.pop();
           expression.push(nowNum);
@@ -43,14 +50,15 @@ function Calc(n) {
         }
       }
     } 
-    if (!CheckOperator(value) && !CheckNumeric(value) && !CheckSeparator(value)) {
+    if (!CheckOperator( n[i] ) && !CheckNumeric( n[i] ) && !CheckSeparator( n[i] )) {
       console.log('Not correct expression'); /*присутствует некорректный символ*/
       return;
     } 
+    i++;
   }
   while (expression.length > 2 && checkCorrect(expression)) { /*дорасчет данных, оставшихся в массиве*/
-    if (!calculatIt(expression)) {
-      console.log('Not correct operaton / 0'); /*некорректно расставлены скобочки*/
+    if (calculatIt(expression)) {
+      console.log('Division by zero!'); /*Деление на ноль*/
       return;
     }
   }
@@ -81,7 +89,7 @@ function CheckSeparator(f) {
 
 /*цифра?*/
 function CheckNumeric(f) {
-  if (parseInt(f)) {
+  if (parseFloat(f) || f === 0 || f == '0') {
     return true; 
   } else {   
     return false;
@@ -90,7 +98,7 @@ function CheckNumeric(f) {
 
 /*проверка корректности данных для расчета*/
 function checkCorrect(expression) {
-  if (!parseInt(expression[expression.length - 1]) || !parseInt(expression[expression.length - 2]) 
+  if (!CheckNumeric(expression[expression.length - 1]) || !CheckNumeric(expression[expression.length - 2]) 
     || !CheckOperator(expression[expression.length - 3])) {
     return false
   } else {
@@ -100,27 +108,29 @@ function checkCorrect(expression) {
 
 /*расчет*/
 function calculatIt(expression) {
-  if (!checkCorrect(expression)) {
-    return;
-  }
+  let notNullNum = false;
 
-  let num2 = expression.pop();
-  let num1 = expression.pop();
-  let nowOperator = expression.pop();
+  if (checkCorrect(expression)) {
+ 
+    let num2 = expression.pop();
+    let num1 = expression.pop();
+    let nowOperator = expression.pop();
 
-  switch(nowOperator) {
-    case '+': expression.push( num1 + num2 )
-      break
-    case '-': /*разные минусы*/
-    case '−': expression.push( num1 - num2 )
-      break
-    case '*': expression.push( num1 * num2 )
-      break
-    case '/': 
-      if (num2 != 0) {
-        expression.push( num1 / num2 );
-      } else {
-        return false;
-      }
+    switch(nowOperator) {
+      case '+': expression.push( num1 + num2 )
+        break
+      case '-': /*разные минусы*/
+      case '−': expression.push( num1 - num2 )
+        break
+      case '*': expression.push( num1 * num2 )
+        break
+      case '/': 
+        if (num2 != 0) {
+          expression.push( num1 / num2 )
+        } else {
+          notNullNum = true;
+        }
+    }
   }
+  return notNullNum;
 }
