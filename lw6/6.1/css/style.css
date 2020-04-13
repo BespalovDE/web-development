@@ -4,7 +4,7 @@ body
     margin: 0px;
 }
 
-.allPage
+.all_Page
 {
 	display: flex;
 	flex-direction: column;
@@ -15,15 +15,13 @@ body
 {
 	flex: 1 0 auto;
 }
+
 .background_block
 {
     background-image: url('../images/Kosmos.jpg');
     background-repeat: no-repeat;
     background-position: center top;
     background-size: auto 400px;
-    position: relative;
-    top: 0px;
-    margin-top: 0px;
 }
 
 .main_block
@@ -61,7 +59,6 @@ body
 blockquote 
 {
     display: block;
-    /*margin-top: 80px;*/
     margin-bottom: 10px;
     margin-left: 20px;
     margin-right: 40px;
@@ -71,7 +68,7 @@ blockquote
     font-style: italic;
 }
 
-.autorPhrase
+.autor_Phrase
 {
     font-weight: bold;
     color: #fff;
@@ -80,7 +77,7 @@ blockquote
     margin-top: 10px;
 }
 
-.favInfo
+.fav_Info
 {
     float: left;
     background: #fff;
@@ -100,7 +97,7 @@ blockquote
     left: 5px;
 }
 
-.spisok2
+.spisok_Next
 {
     padding-left: 18px;
     left: 0px;
@@ -115,7 +112,6 @@ blockquote
     margin-right: 20px; 
     margin-top: -174px;
     position: relative;
-    /*top: -174px;*/
     display: block;
     left: 15px;
 }
@@ -148,7 +144,7 @@ h2
     margin-bottom: 16px;
 }
 
-.favouriteHead
+.favourite_Head
 {
     font-size: 24px;
     margin-bottom: 10px; 
@@ -159,7 +155,7 @@ h2
     font-stretch: expanded;
 }
 
-.lineBlock
+.line_Block
 {
     width:60px;
     height: 6px;
@@ -179,7 +175,6 @@ h2
     background-size: 0px 0px;
     position: relative;
     margin-right: 20px; 
-    /*margin-top: 50px;*/
 }
 
 .quote:before 
@@ -217,22 +212,22 @@ h2
     left: 120px;
 }
 
-.marginTop20
+.margin_Top10
 {
     margin-top: 10px;
 }
 
-.marginTop45
+.margin_Top43
 {
     margin-top: 43px;
 }
 
-.marginTop40
+.margin_Top42
 {
     margin-top: 42px;
 }
 
-.aboutMe
+.about_Me
 {
     font-size: 19px;
     line-height: 32px;
@@ -259,4 +254,9 @@ h2
     margin: 0 auto;
     margin-left: -20px;;
     text-align: center;
+}
+
+.clear_all
+{
+    clear: both;
 }
