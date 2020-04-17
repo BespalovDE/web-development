@@ -12,9 +12,17 @@ function Calc(n) {
   
   while (n.length > i) { /*пробегаем по строке string*/
     if (CheckOperator( n[i] )) {
-      expression.push( n[i] );
+      if (n[i] != '-' && n[i] != '−') {
+        expression.push( n[i] );
+      } else {
+        if (CheckSeparator( n[i + 1] )) { /*если минус, то проверям не отрицательное ли это число*/
+          expression.push( n[i] );
+        }
+      }
     }  
-    if (CheckNumeric( n[i] )) {
+    if (CheckNumeric( n[i] ) || (CheckNumeric( n[i + 1]) && (n[i] == '-' || n[i] == '−'))) {
+      nowNum += n[i];
+      i++;
       while (CheckNumeric( n[i] ) || n[i] == '.') { /*считываем число*/
         nowNum += n[i];
         i++;
@@ -89,7 +97,7 @@ function CheckSeparator(f) {
 
 /*цифра?*/
 function CheckNumeric(f) {
-  if (parseFloat(f) || f === 0 || f == '0') {
+  if (parseFloat(f) > 0 || f === 0 || f == '0' || parseFloat(f) < 0 ) {
     return true; 
   } else {   
     return false;
