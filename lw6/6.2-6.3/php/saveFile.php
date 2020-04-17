@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 function getParameter(string $name): ? string
 {
@@ -16,7 +16,7 @@ function getData()
     $from = getParameter('from');
     $gender = getParameter('gender');
     $message = getParameter('message');
-    $data = "Имя: ${username}\r\nEmal: ${email}\r\nСтрана: ${from}\r\nПол: ${gender}\r\nСообщение: $message";
+    $data = "Имя: ${username}\r\nEmail: ${email}\r\nСтрана: ${from}\r\nПол: ${gender}\r\nСообщение: $message";
     if ($email != null && $message != null)
     {
         $form = [
