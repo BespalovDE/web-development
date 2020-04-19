@@ -1,0 +1,102 @@
+.carouselMovies
+{
+    width: 1400px;
+}
+
+.elipsLeft
+{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background: #15A98C;
+    border-radius: 50px;
+    margin-right: 0px;
+    float: left;
+    display: inline-flex;
+    top: 65px;
+}
+
+.elipsRight
+{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background: #15A98C;
+    border-radius: 50px;
+    margin-right: 0px;
+    float: right;
+    display: inline-flex;
+    top: 65px;
+}
+
+.elipsLeft:hover
+{
+    background: #098d71;
+}
+
+.elipsRight:hover
+{
+    background: #098d71;
+}
+
+.leftArrow
+{
+    position: absolute;
+    width: 19.66px;
+    height: 33px;
+    top: 17px;
+    left: 15px;
+}
+
+.rightArrow
+{
+    position: absolute;
+    width: 19.66px;
+    height: 33px;
+    top: 17px;
+    left: 25px;
+}
+
+.leftDownArrow
+{
+    position: absolute;
+    width: 22.94px;
+    height: 0px;
+    border: 3px solid #FFFFFF;
+    transform: rotate(49.21deg);
+    top: 25px;
+    background-color: #FFFFFF;
+}
+
+.leftUpArrow
+{
+    position: absolute;
+    width: 25px;
+    height: 0px;
+    border: 3px solid #FFFFFF;
+    transform: rotate(-45deg);
+    top: 7px;
+    background-color: #FFFFFF;
+}
+
+.rightDownArrow
+{
+    position: absolute;
+    width: 22.94px;
+    height: 0px;
+    border: 3px solid #FFFFFF;
+    transform: rotate(-45deg);
+    top: 26px;
+    background-color: #FFFFFF;
+}
+
+.rightUpArrow
+{
+    position: absolute;
+    width: 25px;
+    height: 0px;
+    border: 3px solid #FFFFFF;
+    transform: rotate(49.21deg);
+    top: 7px;
+    background-color: #FFFFFF;
+}

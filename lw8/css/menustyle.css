@@ -1,0 +1,95 @@
+.menu_main 
+{
+    list-style: none;
+    margin: 0px 0 0px;
+    margin-left: 20px;
+    padding: 0px 0 0px;
+    text-align: left;
+    height: 50px;
+    background: white;
+}
+
+.menu_main li 
+{
+    display: inline-block;
+    height: 50px;
+}
+
+.widthLi_First
+{
+    width: 136px;   
+}
+
+.widthLi_Second
+{
+    width: 156px;   
+}
+
+.widthLi_Third
+{
+    width: 230px;   
+}
+
+.menu_main a 
+{
+    text-decoration: none;
+    font-family: Georgia, sans-serif;
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    margin: 0 0px 0 0px;
+    font-size: 19px;
+    color: #333333;
+    display: inline-block;
+    transition: color .2s; /*время на изменение цвета*/
+    width: 90%;
+    text-align: left;
+}
+
+.menu_main a:hover 
+{
+    background-color: #15a98c;
+    color: #f5f5f5;   
+}
+
+.menu_main a:hover .aboutme_Icon 
+{
+    filter: invert(1);
+}
+
+.menu_main a:hover .heart_Icon 
+{
+    filter: invert(1);
+}
+
+.menu_main a:hover .video_Icon 
+{
+    filter: invert(1);
+}
+
+.aboutme_Icon
+{ 
+    float: left;
+    display: block;
+    position: relative;
+    background-image: url('../images/aboutme.png');
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    position: relative;
+    background-position: left center;
+    height: 18px;
+    width: 18px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.heart_Icon
+{
+    background-image: url('../images/hearth.png');
+}
+
+.video_Icon
+{
+    background-image: url('../images/video.png');
+}
