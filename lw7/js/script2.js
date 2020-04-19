@@ -1,26 +1,20 @@
 /*Калькулятор: префиксная нотация*/
-function CalcIt(n) {
+function Calc(n) {
   (typeof n == "string")
-    ? Calc(n + ' ')
+    ? CalcImpl(n + ' ')
     : console.log('not correct data!');
 }
 
-function Calc(n) {
+function CalcImpl(n) {
   let expression = [];
   let nowNum = '';
   let i = 0;
   
   while (n.length > i) { /*пробегаем по строке string*/
-    if (CheckOperator( n[i] )) {
-      if (n[i] != '-' && n[i] != '−') {
-        expression.push( n[i] );
-      } else {
-        if (CheckSeparator( n[i + 1] )) { /*если минус, то проверям не отрицательное ли это число*/
-          expression.push( n[i] );
-        }
-      }
+    if (CheckOperator( n[i] )) { /*работа с оператором*/
+      OperatorImpl(n, i, expression);
     }  
-    if (CheckNumeric( n[i] ) || (CheckNumeric( n[i + 1]) && (n[i] == '-' || n[i] == '−'))) {
+    if (CheckNumeric( n[i] ) || (CheckNumeric( n[i + 1]) && (n[i] == '-' || n[i] == '−'))) { /*работа с числом*/
       nowNum += n[i];
       i++;
       while (CheckNumeric( n[i] ) || n[i] == '.') { /*считываем число*/
@@ -36,26 +30,9 @@ function Calc(n) {
       nowNum = '';
       i--;
     }
-    if (CheckSeparator( n[i] )) {
-      if (expression.length > 2 && n[i] != '(') {
-        if (calculatIt(expression)) {
-          console.log('Division by zero!'); /*Деление на ноль*/
-          return;
-        }
-      }
-      if (n[i] == '(') {
-        expression.push( n[i] );
-      }
-      if (n[i] == ')') {
-        if (parseFloat(expression[expression.length - 1]) && expression[expression.length - 2] == '(') {
-          nowNum = expression.pop();
-          expression.pop();
-          expression.push(nowNum);
-          nowNum = '';
-        } else {
-          console.log('Not correct expression'); /*некорректно расставлены скобочки*/
-          return;
-        }
+    if (CheckSeparator( n[i] )) { /*работа с разделителем*/
+      if (SeparatorImpl(n, i, expression)) {
+        return;
       }
     } 
     if (!CheckOperator( n[i] ) && !CheckNumeric( n[i] ) && !CheckSeparator( n[i] )) {
@@ -75,24 +52,50 @@ function Calc(n) {
     : console.log(expression.pop());
 }
 
-/*оператор?*/
-function CheckOperator(f) {
-  let operators = "+-*/−";
-  for (let i = 0; i < operators.length; i++) {
-    if (f == operators[i]) {
+function OperatorImpl(n, i, expression) {
+  if (n[i] != '-' && n[i] != '−') {
+    expression.push( n[i] );
+  } else {
+    if (CheckSeparator( n[i + 1] )) { /*если минус, то проверям не отрицательное ли это число*/
+      expression.push( n[i] );
+    }
+  }
+}
+
+function SeparatorImpl(n, i, expression) {
+  if (expression.length > 2 && n[i] != '(') {
+    if (calculatIt(expression)) {
+      console.log('Division by zero!'); /*Деление на ноль*/
       return true;
-    } 
+    }
+  }
+  if (n[i] == '(') {
+    expression.push( n[i] );
+  }
+  if (n[i] == ')') {
+    if (parseFloat(expression[expression.length - 1]) && expression[expression.length - 2] == '(') {
+      let nowNum = expression.pop();
+      expression.pop();
+      expression.push(nowNum);
+      nowNum = '';
+    } else {
+      console.log('Not correct expression'); /*некорректно расставлены скобочки*/
+      return true;
+    }
   }
   return false;
 }
 
+/*оператор?*/
+function CheckOperator(f) {
+  const operators = ["+", "-", "*", "/", "−"];
+  return operators.includes(f);
+}
+
 /*разделитель?*/
 function CheckSeparator(f) {
-  let separators = " ()";
-  for (let i = 0; i < separators.length; i++) {
-    if (f == separators[i]) return true;
-  }
-  return false;
+  const operators = [" ", "(", ")"];
+  return operators.includes(f);
 }
 
 /*цифра?*/
