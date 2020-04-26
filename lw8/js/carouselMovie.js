@@ -1,6 +1,5 @@
-function getMassiv(filmName, stateAdd, ) {
+function getFilmInfo(filmName, stateAdd) {
     let i = 0;
-    let resultArray = [];
     for (i = 0; i < myfilms.length; i++) {
         if (filmName == myfilms[i].name) {
           break;
@@ -14,59 +13,53 @@ function getMassiv(filmName, stateAdd, ) {
         ? i = myfilms.length - 1
         : i = 0;
     }
-    resultArray.push(myfilms[i].name);
-    resultArray.push(myfilms[i].url);
-    resultArray.push(myfilms[i].info);
-    return resultArray;
+    return myfilms[i];
 }
 
-function createRectBefore() {
+function createFilmBefore() {
     const rect = document.createElement('div');
     rect.classList.add('movie');
-    let newData = getMassiv(document.getElementsByClassName('movie_Picture')[0].getAttribute("alt"), -1);
-    rect.innerHTML = '<img src="' + newData[1] + '" class="movie_Picture" alt="' + newData[0] + '">'
-                   + '<h4>' + newData[0] + '</h4>'
-                   + '<p>' + newData[2] + '</p>';
+    let doc = document.getElementsByClassName('movie_Picture');
+    let newData = getFilmInfo(doc[0].getAttribute("alt"), -1);
+    rect.innerHTML = '<img src="' + newData.url + '" class="movie_Picture" alt="' + newData.name + '">'
+                   + '<h4>' + newData.name + '</h4>'
+                   + '<p>' + newData.info + '</p>';
 	return rect;
 }
 
-function createRectUppend() {
+function createFilmUppend() {
     const rect = document.createElement('div');
     rect.classList.add('movie', 'left_Movie');
     let doc = document.getElementsByClassName('movie_Picture');
-    let newData = getMassiv(doc[doc.length - 1].getAttribute("alt"), 1);
-    rect.innerHTML = '<img src="' + newData[1] + '" class="movie_Picture" alt="' + newData[0] + '">'
-                   + '<h4>' + newData[0] + '</h4>'
-                   + '<p>' + newData[2] + '</p>';
+    let newData = getFilmInfo(doc[doc.length - 1].getAttribute("alt"), 1);
+    rect.innerHTML = '<img src="' + newData.url + '" class="movie_Picture" alt="' + newData.name + '">'
+                   + '<h4>' + newData.name + '</h4>'
+                   + '<p>' + newData.info + '</p>';
 	return rect;
 }
 
-function onAddRight() {
-    const rectsArr = [];
-    const newRect = createRectUppend();
+function onAddFilmRight() {
+    const newRect = createFilmUppend();
     let elem = document.getElementById("movie_block");
     elem.removeChild(elem.firstElementChild);  
     elem.firstElementChild.classList.remove('left_Movie');
 	elem.appendChild(newRect);
-	rectsArr.push(newRect);
 }
 
-function onAddLeft() {
-    const rectsArr = [];
-    const newRect = createRectBefore();
+function onAddFilmLeft() {
+    const newRect = createFilmBefore();
     let elem = document.getElementById('movie_block');
     elem.removeChild(elem.lastElementChild);
     elem.firstElementChild.classList.add('left_Movie');
     elem.prepend(newRect);
-	rectsArr.push(newRect);
 }
 
 
 function run() {
     const addRectLeftMovie = document.getElementById('rightMovie');
-    addRectLeftMovie.addEventListener('click', onAddRight); 
+    addRectLeftMovie.addEventListener('click', onAddFilmRight); 
     const addRectRightMovie = document.getElementById('leftMovie');
-    addRectRightMovie.addEventListener('click', onAddLeft);
+    addRectRightMovie.addEventListener('click', onAddFilmLeft);
 }
 
 window.onload = run;
