@@ -6,7 +6,7 @@
     margin-bottom: 77px;
 }
 
-h3
+.h2_movie
 {
     font-size: 36px;
     font-family: 'Open Sans', sans-serif, Verdana;
@@ -31,7 +31,7 @@ h3
     float: left;
 }
 
-.movie h4
+.movie h3
 {
     font-size: 22px;
     line-height: 32px;
@@ -50,12 +50,12 @@ h3
     font-family: Georgia, sans-serif, Verdana;  
 }
 
-.left_Movie
+.left_movie
 {
     margin-left: 20px;
 }
 
-.movie_Button
+.movie_button
 {
     display: block;
     margin-top: 37px;
@@ -77,12 +77,12 @@ h3
     height: 40px;
 }
 
-.movie_Button:hover
+.movie_button:hover
 {
     background-color: #098d71;
 }
 
-.movie_Picture
+.movie_picture
 {
     width:285px;
     height: 190px; 
