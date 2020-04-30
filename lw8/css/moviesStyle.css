@@ -1,26 +1,22 @@
 .movies
 {
-    margin: 0 auto;
-    margin-top: 93px;
     width: 1400px;
-    margin-bottom: 77px;
+    margin: 93px auto 77px auto;
 }
 
-h3
+.h2_movie
 {
     font-size: 36px;
     font-family: 'Open Sans', sans-serif, Verdana;
     color: #333;
     line-height: 42px;
     font-weight: 400; 
-    margin-top: 0px;
-    margin-left: 100px;
-    margin-bottom: 23px;
+    margin: 0 0 23px 100px;
 }
 
 .movies_block
 {
-    display: inline-block;
+    display: inline-flex;
     margin-left: 100px;
     margin-top: -70px;
     width: 1200px;
@@ -34,15 +30,14 @@ h3
     float: left;
 }
 
-.movie h4
+.movie h3
 {
     font-size: 22px;
     line-height: 32px;
     color: #333333;
     font-family: 'Open Sans', sans-serif, Verdana;
     font-weight: 700;
-    margin-top: 19px;
-    margin-bottom: 18px;
+    margin: 19px 0 18px 0;
 }
 
 .movie p
@@ -53,39 +48,35 @@ h3
     font-family: Georgia, sans-serif, Verdana;  
 }
 
-.left_Movie
+.left_movie
 {
     margin-left: 20px;
 }
 
-.movie_Button
+.movie_button
 {
     display: block;
-    margin-top: 37px;
     font-size: 19px;
     line-height: 32px;
     text-decoration: none;
     padding-top: 11px;
     color: #f5f5f5;
     font-family: Georgia, sans-serif, Verdana;   
-    border-radius: 5px;
     background-color: #15a98c;
     text-align: center;
-    position: relative;
-    left: 50%;
-    transform: translate(-55%, 0);
+    margin: 37px auto 0 auto;
     border-radius: 5px;
     border: none;
     width: 220px;
     height: 40px;
 }
 
-.movie_Button:hover
+.movie_button:hover
 {
     background-color: #098d71;
 }
 
-.movie_Picture
+.movie_picture
 {
     width:285px;
     height: 190px; 

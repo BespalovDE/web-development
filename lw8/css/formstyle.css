@@ -1,16 +1,13 @@
-.form_Block
+.form_block
 {
     width: 780px;
-    height: 860px;
     margin: auto;
-    display: block;
-    padding-top: 25px;
-    position: relative;
-    left: -5px;
     margin-bottom: 41px;
+    display: block;
+    position: relative;
 }
 
-.form_Value
+.form_value
 {
     list-style: none;
     margin: 0px 0 0px;
@@ -21,23 +18,21 @@
 
 .title 
 {
-    font-size: 36px;
-    line-height: 42px;
-    color: #333333;
-    font-family: 'Open Sans', sans-serif, Verdana;
-    font-weight: 300;
+    margin-bottom: 40px;
     text-align: center; 
-    margin-bottom: 68px;
 }
 
-.title span 
+.title_h2
 {
+    font: 300 36px/42px 'Open Sans', sans-serif, Verdana;
+    color: #333333;
+    text-align: center; 
     display: inline-block;
     vertical-align: middle;
 }
 
-.title:before,
-.title:after 
+.title_h2:before,
+.title_h2:after 
 {
     content: ""; /*иначе псевдоэлементы не появятся на сайте */
     display: inline-block;
@@ -49,107 +44,84 @@
     opacity: 0.5;
 }
 
-.title:before 
+.title_h2:before 
 {
     margin-left: -100%;
     left: -14px;
 }
 
-.title:after 
+.title_h2:after 
 {
     margin-right: -100%;
     right: -14px;
 }
 
-.label_First
+.label_first
 {
-    font-size: 20px;
-    line-height: 32px;
+    font: 400 20px/32px 'Open Sans', sans-serif, Verdana;
     color: #333;
-    font-family: 'Open Sans', sans-serif, Verdana;
-    font-weight: 400;
     margin-bottom: 10px;
 }
 
-.label_First:after
+.label_first:after
 {
     color: red;
     content: " *";
 }
 
-.label_Second
+.label_second
 {
-    font-size: 20px;
-    line-height: 32px;
+    font: 400 20px/32px 'Open Sans', sans-serif, Verdana;
     color: #333;
-    font-family: 'Open Sans', sans-serif, Verdana;
-    font-weight: 400;
     display: block;
     margin-bottom: 4px;
 }
 
 
-.radio_Label
+.radio_label
 {
-    font-size: 18px;
-    line-height: 32px;
+    font: 400 18px/32px 'Open Sans', sans-serif, Verdana;
     color: #333;
-    font-family: 'Open Sans', sans-serif, Verdana;
-    font-weight: 400;
-    margin-left: 0px;
-    margin-right: 36px;
+    margin: 0 36px 0 0;
 }
 
-.radio_Button
+.radio_button
 {
-    margin-left: 0px;
-    margin-right: 9px;
+    margin: 3px 9px 0 0;
 }
 
-form
+.form_style
 {
     width: 540px;
     margin: auto;
     padding-left: 8px;
 }
 
-form ul
+.form_margin_between
 {
-    flex-direction: column-reverse;
-    vertical-align: middle;
-    text-align: center; 
-    flex-basis: content;
+    margin-bottom: 25px;
 }
 
-form li
-{
-    margin-bottom: 59px;
-}
-
-.input_Field
+.input_field
 {
     margin-top: 4px;
     width: 500px; /* Ширина поля с учетом padding */
     height: 43px; /* Высота */
-    border: 2px solid #a6a6a6;
-    font-size: 18px;
-    line-height: 32px;
+    border: 2px solid #c9c9c9;
+    font: 400 18px/32px 'Open Sans', sans-serif, Verdana;
     color: #555555;
-    font-family: "Open Sans";
-    font-weight: 400;
-    padding-left: 18px;
-    padding-right: 18px;
+    padding: 1px 18px;
     border-radius: 3px;
 }
 
-.input_Field:focus
+.input_field:focus
 {
     background-color: #c9c9c9;
     border: 2px solid #15a98c;
     border-radius: 3px;
 }
 
-.newSelect_Style
+.newSelect_style
 {
     border: 2px solid #a6a6a6;
     overflow: hidden; 
@@ -161,63 +133,50 @@ form li
     border-radius: 3px;
 }
 
-.newSelect_Style select
+.newSelect_style select
 {
     border-radius: 0;
     background: transparent;
     height: 46px;
-    padding: 5px;
-    padding-left: 18px;
+    padding: 5px 5px 5px 18px;
     border: 0;
-    font-size: 18px;
     line-height: 1;
+    appearance: none;
     -webkit-appearance: none;
+    -moz-appearance: none;
     width: 535px;
     color: #555555;
-    font-family: 'Open Sans', sans-serif, Verdana;
-    font-size: 18px;
-    line-height: 32px;
-    font-weight: 400;
+    font: 400 18px/32px 'Open Sans', sans-serif, Verdana;
 }
 
-.newSelect_Style select option
+.newSelect_style select option
 {
     color: #555555;
-    font-family: 'Open Sans', sans-serif, Verdana;
-    font-size: 18px;
-    line-height: 32px;
-    font-weight: 400;
+    font: 400 18px/32px 'Open Sans', sans-serif, Verdana;
 }
 
-.margin_Li
+.margin_radio
 {
-    margin-top: 19px;
-    margin-bottom: 54px;
+    margin: 43px 0 36px 0;
 }
 
-textarea
+.for_textarea
 {
     margin-top: 3px;
-    border: 2px solid #a6a6a6;
+    border: 2px solid #c9c9c9;
     color: #555555;
-    font-family: 'Open Sans', sans-serif, Verdana;
-    font-size: 18px;
-    line-height: 32px;
-    font-weight: 400;
+    font: 400 18px/32px 'Open Sans', sans-serif, Verdana;
     width: 532px;
     height: 140px;
     resize: none;
     border-radius: 3px;
 }
 
-.form_Button
+.form_button
 {
-    margin-top: 47px;
-    margin-left: 1px;
-    font-size: 19px;
-    line-height: 32px;
+    margin: 22px 0 12px 1px;
+    font: 19px/32px Georgia, sans-serif, Verdana;  
     color: #f5f5f5;
-    font-family: Georgia, sans-serif, Verdana;  
     width: 220px;
     height: 50px;
     border-radius: 5px;
@@ -226,7 +185,7 @@ textarea
     border: none;
 }
 
-.form_Button:hover
+.form_button:hover
 {
     background-color: #098d71;
 }

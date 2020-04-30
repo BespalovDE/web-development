@@ -1,9 +1,9 @@
-.carouselMovies
+.carousel_movies
 {
     width: 1400px;
 }
 
-.elipsLeft
+.elips_left
 {
     position: relative;
     width: 70px;
@@ -16,7 +16,7 @@
     top: 65px;
 }
 
-.elipsRight
+.elips_right
 {
     position: relative;
     width: 70px;
@@ -29,17 +29,17 @@
     top: 65px;
 }
 
-.elipsLeft:hover
+.elips_left:hover
 {
     background: #098d71;
 }
 
-.elipsRight:hover
+.elips_right:hover
 {
     background: #098d71;
 }
 
-.leftArrow
+.left_arrow
 {
     position: absolute;
     width: 19.66px;
@@ -48,7 +48,7 @@
     left: 15px;
 }
 
-.rightArrow
+.right_arrow
 {
     position: absolute;
     width: 19.66px;
@@ -57,7 +57,7 @@
     left: 25px;
 }
 
-.leftDownArrow
+.left_down_arrow
 {
     position: absolute;
     width: 22.94px;
@@ -68,7 +68,7 @@
     background-color: #FFFFFF;
 }
 
-.leftUpArrow
+.left_up_arrow
 {
     position: absolute;
     width: 25px;
@@ -79,7 +79,7 @@
     background-color: #FFFFFF;
 }
 
-.rightDownArrow
+.right_down_arrow
 {
     position: absolute;
     width: 22.94px;
@@ -90,7 +90,7 @@
     background-color: #FFFFFF;
 }
 
-.rightUpArrow
+.right_up_arrow
 {
     position: absolute;
     width: 25px;
