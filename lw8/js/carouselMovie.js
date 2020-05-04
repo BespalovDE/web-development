@@ -22,8 +22,8 @@ function createFilmBefore() {
     let doc = document.getElementsByClassName('movie_picture');
     let newData = getFilmInfo(doc[0].getAttribute("alt"), -1);
     rect.innerHTML = '<img src="' + newData.url + '" class="movie_picture" alt="' + newData.name + '">'
-                   + '<h3>' + newData.name + '</h3>'
-                   + '<p>' + newData.info + '</p>';
+                   + '<h3 class="movie_h3">' + newData.name + '</h3>'
+                   + '<p class="movie_p">' + newData.info + '</p>';
 	return rect;
 }
 
@@ -33,8 +33,8 @@ function createFilmUppend() {
     let doc = document.getElementsByClassName('movie_picture');
     let newData = getFilmInfo(doc[doc.length - 1].getAttribute("alt"), 1);
     rect.innerHTML = '<img src="' + newData.url + '" class="movie_picture" alt="' + newData.name + '">'
-                   + '<h3>' + newData.name + '</h3>'
-                   + '<p>' + newData.info + '</p>';
+                   + '<h3 class="movie_h3">' + newData.name + '</h3>'
+                   + '<p class="movie_p">' + newData.info + '</p>';
 	return rect;
 }
 
