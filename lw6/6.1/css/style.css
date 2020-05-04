@@ -80,7 +80,7 @@ body
     margin-top: 0px; 
 }
 
-.spisok
+.list
 {
     font: 19px Georgia, Verdana;
     color: #555;
@@ -91,7 +91,7 @@ body
     left: 5px;
 }
 
-.spisok_next
+.list_next
 {
     padding-left: 18px;
     left: 0px;
@@ -190,17 +190,17 @@ body
     left: 120px;
 }
 
-.margin_top10
+.margin_top_10
 {
     margin-top: 10px;
 }
 
-.margin_top43
+.margin_top_43
 {
     margin-top: 43px;
 }
 
-.margin_top42
+.margin_top_42
 {
     margin-top: 42px;
 }
@@ -220,7 +220,7 @@ body
     flex: 0 0 auto;
 }
 
-.footer p
+.footer_p
 {
     font: 16px/60px Georgia, Verdana;
     color: #555;

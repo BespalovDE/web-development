@@ -1,7 +1,7 @@
 .movies
 {
     width: 1200px;
-    margin: 93px auto 77px auto;
+    margin: 93px auto 75px auto;
 }
 
 .h2_movie
@@ -23,11 +23,10 @@
 {
     margin-top: 10px; 
     width: 285px;
-    height: 0 auto;
     float: left;
 }
 
-.movie h3
+.movie_h3
 {
     font-size: 22px;
     line-height: 32px;
@@ -37,7 +36,7 @@
     margin: 19px 0 18px 0;
 }
 
-.movie p
+.movie_p
 {
     font-size: 16px;
     line-height: 28px;
