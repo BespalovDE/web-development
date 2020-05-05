@@ -1,0 +1,235 @@
+body 
+{
+    height: 100%;
+    margin: 0px;
+}
+
+.all_page
+{
+	display: flex;
+	flex-direction: column;
+    min-height: 100%;
+}
+
+.content 
+{
+	flex: 1 0 auto;
+}
+
+.background_block
+{
+    background-image: url('../images/Kosmos.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: auto 400px;
+}
+
+.main_block
+{
+     margin: 0 auto;
+     width: 960px;
+}
+
+.menu_block
+{
+    margin: auto;
+    margin-top: 0px;
+    width: 1000px;
+}
+
+.top_block
+{
+    margin: 0 auto 47px auto;
+    padding-top: 208px;
+    width: 960px;
+    height: 350px;
+} 
+
+.photo
+{
+    float: left;
+    width:330px;
+    height: 350px; 
+    border-radius: 5px;
+    margin-left: 0px;
+}
+
+.for_blockquote 
+{
+    display: block;
+    margin: 28px 40px 10px 20px;
+    line-height: 42px;
+    color: #fff;
+    font: italic 28px/1.5 Georgia, Arial;
+}
+
+.autor_phrase
+{
+    font-weight: bold;
+    color: #fff;
+    font-style: normal;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.fav_info
+{
+    float: left;
+    background: #fff;
+    width:330px;
+    margin-top: 0px; 
+}
+
+.list
+{
+    font: 19px Georgia, Verdana;
+    color: #555;
+    line-height: 36px;
+    margin-top: 12px; 
+    padding-left: 20px;
+    position: relative;
+    left: 5px;
+}
+
+.list_next
+{
+    padding-left: 18px;
+    left: 0px;
+}
+
+.info
+{
+    width: 570px;
+    float: right; 
+    background: #fff;
+    margin: -174px 20px 0 30px;
+    position: relative;
+    display: block;
+    left: 15px;
+}
+
+.info::after
+{
+    position: sticky;
+}
+
+.for_h1
+{
+    font: 700 48px/1.5 'Open Sans', sans-serif, Verdana;
+    color: #333;
+    margin-top: 0px;
+    margin-bottom: 16px;
+}
+
+.h2_hobby
+{
+    font: 400 36px/42px 'Open Sans', sans-serif, Verdana;
+    color: #333;
+    margin: 0px 0px 16px 1px;
+}
+
+.favourite_head
+{
+    font: 600 24px/32px 'Open Sans', sans-serif, Verdana;
+    margin-bottom: 10px; 
+    color: #15a98c;
+    font-stretch: expanded;
+}
+
+.line_block
+{
+    width:60px;
+    height: 6px;
+    background:#15a98c;
+    border-radius: 5px;
+    margin-top: 0px;
+    margin-left: 5px;
+}
+
+.quote
+{
+    width: 570px;
+    height: 350px;
+    float: right; 
+    background-image: url('../images/comma.png');
+    background-repeat: no-repeat;
+    background-size: 0px 0px;
+    position: relative;
+    margin-right: 20px; 
+}
+
+.quote:before 
+{
+    content: "";
+    display: block;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: inherit;
+    background-size: 150px 92px;
+    opacity: 0.05;
+}
+
+.arrow
+{
+    font: 19px/32px Georgia, Verdana;
+    margin: 40px 0 0 5px;
+    color: #15a98b;
+    display: block;
+    position: relative;
+}
+
+.arrow:after
+{
+    content: ' →';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 120px;
+}
+
+.margin_top_10
+{
+    margin-top: 10px;
+}
+
+.margin_top_43
+{
+    margin-top: 43px;
+}
+
+.margin_top_42
+{
+    margin-top: 42px;
+}
+
+.about_me
+{
+    font: 19px/32px Georgia, Verdana;
+    color: #555555;
+    padding-left: 0px;
+}
+
+.footer 
+{
+    margin: auto;
+    height: 60px;
+    width: 1000;
+    flex: 0 0 auto;
+}
+
+.footer_p
+{
+    font: 16px/60px Georgia, Verdana;
+    color: #555;
+    margin: auto;
+    margin-left: -20px;;
+    text-align: center;
+}
+
+.clear_all
+{
+    clear: both;
+}
