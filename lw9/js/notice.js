@@ -20,25 +20,22 @@ async function processFormData(event) {
     'message': message.value
   };
   const response = await ajaxSend(data);
-  (response['user_name'] == 'error')
-    ? user_name.classList.add('error')
-    : user_name.classList.remove('error');
-  (response['email'] == 'error')
-    ? email.classList.add('error')
-    : email.classList.remove('error');
-  (response['country'] == 'error')
-    ? country.classList.add('error')
-    : country.classList.remove('error');
-  (response['message'] == 'error')
-    ? message.classList.add('error')
-    : message.classList.remove('error');
-  const notice = document.getElementById('notice')
-  if (response['user_name'] == 'correct' && response['email'] == 'correct' 
-    && response['country'] == 'correct' && response['message'] == 'correct') {
-    notice.innerHTML = 'Ваше сообщение успешно отправлено';
-  } else {
-    notice.innerHTML = '';
+  let notice_message = 'Ваше сообщение успешно отправлено';
+  const check_fields = {
+    'user_name': user_name, 
+    'email': email, 
+    'country': country, 
+    'message': message
+  };
+  for (var key in check_fields) {
+    if (response[key] == 'error') {
+      check_fields[key].classList.add('error');
+      notice_message = '';
+    } else {
+      check_fields[key].classList.remove('error');
+    }
   }
+  document.getElementById('notice').innerHTML = notice_message;
 }
 
 async function ajaxSend(data) {
@@ -50,8 +47,7 @@ async function ajaxSend(data) {
     body: JSON.stringify(data)
   })
   if (response.ok) {
-    let json = await response.json();
-    return json;
+    return await response.json();
   } else {
     alert("Ошибка HTTP: " + response.status);
   }
