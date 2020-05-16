@@ -8,7 +8,10 @@ CREATE TABLE faculty
     faculty_name VARCHAR(255) NOT NULL,
     faculty_head VARCHAR(255),
     PRIMARY KEY(id)
-);
+)  DEFAULT CHARACTER SET utf8mb4
+   COLLATE `utf8mb4_unicode_ci`
+   ENGINE = InnoDB
+;
 
 CREATE TABLE university_groups
 (
@@ -17,7 +20,10 @@ CREATE TABLE university_groups
     learning_year TINYINT UNSIGNED NOT NULL,
     group_faculty INT NOT NULL,
     PRIMARY KEY(group_id)
-);
+)  DEFAULT CHARACTER SET utf8mb4
+   COLLATE `utf8mb4_unicode_ci`
+   ENGINE = InnoDB
+;
 
 CREATE TABLE students
 (
@@ -29,7 +35,10 @@ CREATE TABLE students
     sex VARCHAR (6) NOT NULL,
     student_group INT NOT NULL,
     PRIMARY KEY(id)
-);
+)  DEFAULT CHARACTER SET utf8mb4
+   COLLATE `utf8mb4_unicode_ci`
+   ENGINE = InnoDB
+;
 
 INSERT INTO faculty set faculty_name = 'Economics and management', faculty_head = 'Starcev U.A.';
 INSERT INTO faculty set faculty_name = 'Physics and astronomy', faculty_head = 'Ivanov P.E.';
