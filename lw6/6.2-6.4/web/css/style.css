@@ -4,7 +4,7 @@ body
     margin: 0px;
 }
 
-.all_Page
+.all_page
 {
 	display: flex;
 	flex-direction: column;
@@ -26,7 +26,6 @@ body
 
 .main_block
 {
-     margin-top: 50px;
      margin: 0 auto;
      width: 960px;
 }
@@ -40,11 +39,10 @@ body
 
 .top_block
 {
-    margin: 0 auto;
+    margin: 0 auto 47px auto;
     padding-top: 208px;
     width: 960px;
     height: 350px;
-    margin-bottom: 47px;
 } 
 
 .photo
@@ -56,19 +54,16 @@ body
     margin-left: 0px;
 }
 
-blockquote 
+.for_blockquote 
 {
     display: block;
-    margin-bottom: 10px;
-    margin-left: 20px;
-    margin-right: 40px;
+    margin: 28px 40px 10px 20px;
     line-height: 42px;
     color: #fff;
-    font: 28px/1.5 Georgia, Arial;
-    font-style: italic;
+    font: italic 28px/1.5 Georgia, Arial;
 }
 
-.autor_Phrase
+.autor_phrase
 {
     font-weight: bold;
     color: #fff;
@@ -77,7 +72,7 @@ blockquote
     margin-top: 10px;
 }
 
-.fav_Info
+.fav_info
 {
     float: left;
     background: #fff;
@@ -85,10 +80,9 @@ blockquote
     margin-top: 0px; 
 }
 
-.spisok
+.list
 {
-    font-size: 19px;
-    font-family: Georgia,Verdana;
+    font: 19px Georgia, Verdana;
     color: #555;
     line-height: 36px;
     margin-top: 12px; 
@@ -97,7 +91,7 @@ blockquote
     left: 5px;
 }
 
-.spisok_Next
+.list_next
 {
     padding-left: 18px;
     left: 0px;
@@ -108,9 +102,7 @@ blockquote
     width: 570px;
     float: right; 
     background: #fff;
-    margin-left: 30px; 
-    margin-right: 20px; 
-    margin-top: -174px;
+    margin: -174px 20px 0 30px;
     position: relative;
     display: block;
     left: 15px;
@@ -121,41 +113,30 @@ blockquote
     position: sticky;
 }
 
-h1
+.for_h1
 {
-    font-size: 48px;
-    font-family: 'Open Sans', sans-serif, Verdana;
+    font: 700 48px/1.5 'Open Sans', sans-serif, Verdana;
     color: #333;
-    line-height: 1.5;
-    font-weight: 700; 
     margin-top: 0px;
     margin-bottom: 16px;
 }
 
-h2
+.h2_hobby
 {
-    font-size: 36px;
-    font-family: 'Open Sans', sans-serif, Verdana;
+    font: 400 36px/42px 'Open Sans', sans-serif, Verdana;
     color: #333;
-    line-height: 42px;
-    font-weight: 400; 
-    margin-top: 0px;
-    margin-left: 1px;
-    margin-bottom: 16px;
+    margin: 0px 0px 16px 1px;
 }
 
-.favourite_Head
+.favourite_head
 {
-    font-size: 24px;
+    font: 600 24px/32px 'Open Sans', sans-serif, Verdana;
     margin-bottom: 10px; 
-    font-family: 'Open Sans', sans-serif, Verdana;
     color: #15a98c;
-    line-height: 32px;
-    font-weight: 600;
     font-stretch: expanded;
 }
 
-.line_Block
+.line_block
 {
     width:60px;
     height: 6px;
@@ -191,19 +172,16 @@ h2
     opacity: 0.05;
 }
 
-.Arrow
+.arrow
 {
-    margin-top: 40px;
-    margin-left: 5px;
-    font-size: 19px;
-    line-height: 32px;
+    font: 19px/32px Georgia, Verdana;
+    margin: 40px 0 0 5px;
     color: #15a98b;
-    font-family: Georgia, Verdana;
     display: block;
     position: relative;
 }
 
-.Arrow:after
+.arrow:after
 {
     content: ' →';
     display: block;
@@ -212,46 +190,41 @@ h2
     left: 120px;
 }
 
-.margin_Top10
+.margin_top_10
 {
     margin-top: 10px;
 }
 
-.margin_Top43
+.margin_top_43
 {
     margin-top: 43px;
 }
 
-.margin_Top42
+.margin_top_42
 {
     margin-top: 42px;
 }
 
-.about_Me
+.about_me
 {
-    font-size: 19px;
-    line-height: 32px;
+    font: 19px/32px Georgia, Verdana;
     color: #555555;
-    font-family: Georgia, Verdana;
     padding-left: 0px;
 }
 
 .footer 
 {
-    margin: 0 auto;
+    margin: auto;
     height: 60px;
     width: 1000;
     flex: 0 0 auto;
 }
 
-.footer p
+.footer_p
 {
-    font-size: 16px;
-    line-height: 32px;
+    font: 16px/60px Georgia, Verdana;
     color: #555;
-    font-family: Georgia, Verdana;
-    line-height: 60px;
-    margin: 0 auto;
+    margin: auto;
     margin-left: -20px;;
     text-align: center;
 }
