@@ -1,0 +1,5 @@
+username: Dima
+email: darkadvent@mail.ru
+from: Россия
+gender: Мужской
+message: Hello, my friend!

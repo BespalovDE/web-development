@@ -1,0 +1,5 @@
+username: Олег
+email: superoleg@mail.ru
+from: Азерот
+gender: Мужской
+message: I'm elf!

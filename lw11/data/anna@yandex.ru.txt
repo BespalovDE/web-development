@@ -1,0 +1,5 @@
+username: Anna
+email: anna@yandex.ru
+from: Украина
+gender: Женский
+message: Добренько былы, хлопцы!
