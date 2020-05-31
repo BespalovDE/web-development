@@ -5,7 +5,7 @@ CREATE TABLE profiles
     id INT AUTO_INCREMENT NOT NULL,
     username VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
-    `from` VARCHAR(255) NOT NULL,
+    country VARCHAR(255) NOT NULL,
     gender VARCHAR(255) NOT NULL,
     message VARCHAR(255) NOT NULL,
     PRIMARY KEY (id)
@@ -14,7 +14,7 @@ CREATE TABLE profiles
   ENGINE = InnoDB
 ;
 
-INSERT INTO profiles (username, email, `from`, gender, message) 
+INSERT INTO profiles (username, email, country, gender, message) 
 VALUES 
     ('Dima', 'darkadvent@mail.ru', 'Россия', 'Мужской', 'Hello, my friend!'),
     ('Sasha', 'sasha123@mail.ru', 'Украина', 'Мужской', 'How do you do?'),

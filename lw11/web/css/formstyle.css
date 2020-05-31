@@ -1,4 +1,4 @@
-.form_block
+﻿.form_block
 {
     width: 780px;
     margin: auto;
@@ -184,6 +184,7 @@
     background-color: #15a98c;
     text-align: center;
     border: none;
+    float: left;
 }
 
 .form_button:hover

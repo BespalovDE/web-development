@@ -45,7 +45,7 @@ function validateUserData(array $userData): array
     {
         array_push($uncorrFields, 'Email');
     }
-    if ((is_null($userData['from'])) || ($userData['from'] === 'Не указано'))
+    if ((is_null($userData['country'])) || ($userData['country'] === 'Не указано'))
     {
         array_push($uncorrFields, 'Страна');
     }   
@@ -73,7 +73,7 @@ function readProfileFile(string $fileName): array
     {
         $translate['username'] = 'Имя';
         $translate['email'] = 'Эл. ящик';
-        $translate['from'] = 'Страна';
+        $translate['country'] = 'Страна';
         $translate['gender'] = 'Пол';
         $translate['message'] = 'Сообщение';
         $text = file($fileName, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);

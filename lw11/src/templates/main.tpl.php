@@ -6,8 +6,10 @@
      <link href="css/style.css" rel="stylesheet">
      <link href="css/menustyle.css" rel="stylesheet">
      <link href="css/moviesStyle.css" rel="stylesheet">
-     <link href="css/formStyle.css" rel="stylesheet">
+     <link href="css/formstyle.css" rel="stylesheet">
      <link href="css/php_styles.css" rel="stylesheet">
+     <link href="css/notice.css" rel="stylesheet">
+     <script src="js/notice.js" defer></script>
      <title>Anket</title>
   </head>
   <body>
@@ -153,38 +155,29 @@
         <form class="form_style" method="POST" autocomplete="off">
           <div class="form_value">
             <div class="label_first">Ваше имя</div>
-            <input type="text" class="input_field form_margin_between" name="username" value="<?php echo($args['valuesBefore']['username'] ?? ''); ?>" />
+            <input type="text" class="input_field form_margin_between" name="username" id="username" value="<?php echo($args['valuesBefore']['username'] ?? ''); ?>" />
             <div class="label_first">Ваш email</div>
-            <input type="text" class="input_field form_margin_between" name="email" value="<?php echo($args['valuesBefore']['email'] ?? ''); ?>" />
+            <input type="text" class="input_field form_margin_between" name="email" id="email" value="<?php echo($args['valuesBefore']['email'] ?? ''); ?>" />
             <div class="label_second">Откуда вы?</div>
             <div class="new_select_style form_margin_between"> 
-              <select name="from" class="new_select_style_select">
-                <option class="option_style" value="Не указано" <?php echo printSelected('from', 'Не указано', $args['valuesBefore']); ?> >Не указано</option>
-                <option class="option_style" value="Россия" <?php echo printSelected('from', 'Россия', $args['valuesBefore']); ?> >Россия</option>
-                <option class="option_style" value="Украина" <?php echo printSelected('from', 'Украина', $args['valuesBefore']); ?> >Украина</option>
-                <option class="option_style" value="Беларусь" <?php echo printSelected('from', 'Беларусь', $args['valuesBefore']); ?> >Беларусь</option>
-                <option class="option_style" value="Казахстан" <?php echo printSelected('from', 'Казахстан', $args['valuesBefore']); ?> >Казахстан</option>
-                <option class="option_style" value="Средиземье" <?php echo printSelected('from', 'Средиземье', $args['valuesBefore']); ?> >Средиземье</option>
-                <option class="option_style" value="Нарния" <?php echo printSelected('from', 'Нарния', $args['valuesBefore']); ?> >Нарния</option>
-                <option class="option_style" value="Азерот" <?php echo printSelected('from', 'Азерот', $args['valuesBefore']); ?> >Азерот</option>
+              <select name="country" class="new_select_style_select" id="country">
+                <option class="option_style" value="Не указано" <?php echo printSelected('country', 'Не указано', $args['valuesBefore']); ?> >Не указано</option>
+                <option class="option_style" value="Россия" <?php echo printSelected('country', 'Россия', $args['valuesBefore']); ?> >Россия</option>
+                <option class="option_style" value="Украина" <?php echo printSelected('country', 'Украина', $args['valuesBefore']); ?> >Украина</option>
+                <option class="option_style" value="Беларусь" <?php echo printSelected('country', 'Беларусь', $args['valuesBefore']); ?> >Беларусь</option>
+                <option class="option_style" value="Казахстан" <?php echo printSelected('country', 'Казахстан', $args['valuesBefore']); ?> >Казахстан</option>
+                <option class="option_style" value="Средиземье" <?php echo printSelected('country', 'Средиземье', $args['valuesBefore']); ?> >Средиземье</option>
+                <option class="option_style" value="Нарния" <?php echo printSelected('country', 'Нарния', $args['valuesBefore']); ?> >Нарния</option>
+                <option class="option_style" value="Азерот" <?php echo printSelected('country', 'Азерот', $args['valuesBefore']); ?> >Азерот</option>
               </select>
             </div> 
             <div class="margin_radio"><div class="label_second">Ваш пол</div> 
             <input type="radio" class="radio_button" name="gender" id="r1" value="Мужской" <?php echo printChecked('gender', 'Мужской', $args['valuesBefore']); ?> /><label class="radio_label" for="r1">Мужской</label>
             <input type="radio" class="radio_button" name="gender" id="r2" value="Женский" <?php echo printChecked('gender', 'Женский', $args['valuesBefore']); ?> /><label class="radio_label" for="r2">Женский</label> </div>
             <div class="label_first">Ваше сообщение</div>
-            <textarea class="for_textarea form_margin_between" name="message" wrap="hard"><?php echo $args['valuesBefore']['message'] ?? ''; ?></textarea>
-            <button type="submit" class="form_button" onClick="Handler" value="send">Отправить</button>
-            <span class="form_answer <?php echo isset($args['status']) ? $args['status'] === 1 ? 'success' : 'error' : ''; ?>"><?php echo $args['message']; ?></span>
-              <?php if (isset($args['status']) && $args['status'] === 0) 
-                 { 
-              ?>
-              <ul class="error_fields">
-              <?php foreach($args['errorFields'] as $answer): ?>
-                <li><?php echo $answer; ?></li>
-              <?php endforeach; ?>
-              </ul>
-              <?php } ?>
+            <textarea class="for_textarea form_margin_between" id="message" name="message" wrap="hard"><?php echo $args['valuesBefore']['message'] ?? ''; ?></textarea>
+            <button type="submit" class="form_button" value="send">Отправить</button>
+            <div class="notice" id="notice"></div>
           </div>
         </form>
       </div>
