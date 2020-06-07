@@ -1,6 +1,6 @@
 <?php
 
-function getPostParameter(string $fieldName): ?string
+function getPostParameter(string $fieldName): ? string
 {   
     $value = null;
     if ((isset($_POST[$fieldName])) && ($_POST[$fieldName] !== ''))

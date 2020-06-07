@@ -161,7 +161,7 @@
             <div class="label_second">Откуда вы?</div>
             <div class="new_select_style form_margin_between"> 
               <select name="country" class="new_select_style_select" id="country">
-                <option class="option_style" value="Не указано" <?php echo printSelected('country', 'Не указано', $args['valuesBefore']); ?> >Не указано</option>
+                <option class="option_style" id="firstcountry" value="Не указано" <?php echo printSelected('country', 'Не указано', $args['valuesBefore']); ?> >Не указано</option>
                 <option class="option_style" value="Россия" <?php echo printSelected('country', 'Россия', $args['valuesBefore']); ?> >Россия</option>
                 <option class="option_style" value="Украина" <?php echo printSelected('country', 'Украина', $args['valuesBefore']); ?> >Украина</option>
                 <option class="option_style" value="Беларусь" <?php echo printSelected('country', 'Беларусь', $args['valuesBefore']); ?> >Беларусь</option>

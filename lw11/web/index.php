@@ -5,17 +5,16 @@ require_once(dirname(__DIR__) . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATO
 
 if (getRequestMethod() === 'POST')
 {   
-    //если POST - проверка данных, сохранение и главная страница
     $postArray = json_decode(file_get_contents("php://input"), true);
-    $duty = ['username', 'email', 'country', 'gender', 'message'];
-    $resultArray = fillResultArray($postArray, $duty);
-    header('Content-Type: application/json');
+    /*$postArray['username'] = getPostParameter('username');
+    $postArray['email'] = getPostParameter('email');
+    $postArray['country'] = getPostParameter('country');
+    $postArray['gender'] = getPostParameter('gender');
+    $postArray['message'] = getPostParameter('message');*/
     saveFeedbackPage($postArray);
-    echo json_encode($resultArray);  
 } 
 else
 {
-    //иначе - главная страница
     mainPage();
 }
 

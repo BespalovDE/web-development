@@ -20,32 +20,34 @@ async function processFormData(event) {
     'message': message.value
   };
   const response = await ajaxSend(data);
-  let notice_message = 'Ваше сообщение успешно отправлено';
+  let noticeMessage = 'Ваше сообщение успешно отправлено';
   const check_fields = {
     'username': username, 
     'email': email, 
     'country': country, 
     'message': message
   };
+  let checkCorrect = true;
   for (var key in check_fields) {
     if (response[key] == 'error') {
       check_fields[key].classList.add('error');
-      notice_message = '';
+      checkCorrect = false;
+      noticeMessage = '';
     } else {
       check_fields[key].classList.remove('error');
     }
   }
 
-  if (notice_message === 'Ваше сообщение успешно отправлено') {
+  if (checkCorrect) {
     clearMessageInfo(data);
   }
-  document.getElementById('notice').innerHTML = notice_message;
+  document.getElementById('notice').innerHTML = noticeMessage;
 }
 
 async function clearMessageInfo(data) {
   document.getElementById('username').value = '';
   document.getElementById('email').value =  '';
-  document.getElementById('country').value =  'Не указано';
+  document.getElementById('country').value =  document.getElementById('firstcountry').value;
   document.getElementById('message').value =  '';
 }
 

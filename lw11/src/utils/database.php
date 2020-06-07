@@ -21,14 +21,14 @@ function saveFeedback(array $feedback): void
     $gender = database()->quote($feedback['gender']);
     $message = database()->quote($feedback['message']);
     $count = database()->query("SELECT COUNT(*) FROM profiles WHERE email = $email");
-    if ($count->fetchColumn() == 0)
-    {
+    /*if ($count->fetchColumn() == 0)
+    {*/
         $stm = database()->query("INSERT INTO profiles (username, email, country, gender, message) VALUES ($username, $email, $country, $gender, $message)");    
-    }
-    else
+    /*}*/
+    /*else
     {
         $stm = database()->query("UPDATE profiles SET username = $username, country = $country, gender = $gender, message = $message WHERE email = $email");
-    }
+    }*/
 }
 
 function getFeedback(string $email): array
@@ -45,6 +45,12 @@ function getFeedback(string $email): array
         $profileData['gender'] = "Пол: ${profile['gender']}";
         $profileData['message'] = "Сообщение: ${profile['message']}";
         $fileExist = true;
+        $stringCount = 1;
+        $profile = $stm->fetch();
+        while ($profile <> null) {
+            $profileData['message'] = $profileData['message'] . "\n ${profile['message']}";
+          $profile = $stm->fetch();
+        }
     }
     else
     {
