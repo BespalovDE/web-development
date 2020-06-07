@@ -20,13 +20,17 @@ async function processFormData(event) {
     'message': message.value
   };
   const response = await ajaxSend(data);
-  let noticeMessage = 'Ваше сообщение успешно отправлено';
   const check_fields = {
     'username': username, 
     'email': email, 
     'country': country, 
     'message': message
   };
+  ShowResult(response, check_fields);
+}
+
+async function ShowResult(response, check_fields) {
+  let noticeMessage = 'Ваше сообщение успешно отправлено';
   let checkCorrect = true;
   for (var key in check_fields) {
     if (response[key] == 'error') {
@@ -37,7 +41,6 @@ async function processFormData(event) {
       check_fields[key].classList.remove('error');
     }
   }
-
   if (checkCorrect) {
     clearMessageInfo(data);
   }
