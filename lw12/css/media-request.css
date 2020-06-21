@@ -1,0 +1,488 @@
+@media screen and (max-width: 479px)
+{
+    .top_grid_block
+    {   
+        display: grid;  
+        padding: 0,5%,0,5%;
+        grid-template-rows: auto auto;
+        grid-template-columns: 100%;
+        grid-template-areas:
+        " menu_block "
+        " background_block ";
+    }
+
+    .background_block
+    {
+       background-size: auto 25%;
+       display: grid;  
+       /*grid-template-columns: 100%;*/
+       grid-template-columns: auto;
+       grid-template-areas:
+       " main_block "
+       " info "
+       " fav_info ";
+    }
+
+    .main_block
+    {   
+        display: grid;  
+        width: auto;
+        /*grid-template-columns: auto;*/
+        grid-template-areas:
+        " top_block "
+        " quote ";
+    }
+
+    .background_block
+    {
+       background-size: auto 25%;
+      /* padding: 0 0 5% 0;*/
+    }
+/*
+    .movies_block
+    {
+        flex-direction: row;
+    }*/
+
+    .left_movie
+    {
+        visibility: hidden;
+        height: 0;
+        margin: 0;
+        /* margin-left: 20px;
+         margin-left: 5%;*/
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 480px)
+{    
+   /* .menu_main
+    {
+        flex-direction: row;
+    }*/
+/*
+    .menu_main_a 
+    {
+        text-decoration: none;
+        padding: 15px 0 15px 5px;
+        margin: 0 0px 0 0px;
+        font-size: 16px;
+        display: inline-block;
+        text-align: left;
+    }
+*/
+    .about_me_icon
+    { 
+        width: 32%;
+    }
+
+    .heart_icon
+    {
+        width: 27%;
+    }
+
+    .video_icon
+    {
+        width: 20%;
+    }
+
+    .background_block
+    {
+        display: grid;  
+        /*grid-template-columns: 100%;*/
+       /*grid-template-columns: 40% 45%;*/
+       grid-column-gap: 3%;
+       /*grid-template-columns: 30% 30% 35%;*/
+       grid-template-rows: auto auto;
+       grid-template-areas:
+       " main_block main_block "
+       " info       fav_info  ";
+    }
+
+    .main_block
+    {   
+        /*grid-template-rows: repeat(4, auto);*/
+       /* margin: 20px 40px 0 40px;*/
+        grid-column-gap: 4%;
+        grid-template-areas:
+        " top_block "
+        " quote ";
+        grid-template-columns: 60%;
+        grid-area: 1 / 1 / 2 / 3;
+    }
+
+    .top_block
+    {
+        margin: 0;
+        padding: 5%;
+        grid-area: top_block;
+    } 
+
+    .quote
+    {
+        padding: 0 0; 
+    }
+
+    .for_blockquote 
+    {
+        margin: 2% 5%;
+        line-height: 36px;
+        font: italic 28px/1.5 Georgia, Arial;
+    }
+
+    .for_h1
+    {
+        font: 700 38px/1.5 'Open Sans', sans-serif, Verdana;
+    }
+
+    .list
+    {
+        font: 16px/20px Georgia, Verdana;
+    }
+
+    .movies_block
+    {
+        display: contents;
+        flex-direction: row;
+        justify-content: flex-start;   
+    }
+
+    .movie
+    {
+        float: left;
+        width: 45%;
+        margin: 0 2.5%;
+    }
+
+    .movie_h3
+    {
+         font-size: 24px;
+         line-height: 18px;
+    }
+
+    .movie_p 
+    {
+         font-size: 16px;
+         line-height: 18px;
+    }
+
+    .movie_button
+    {
+        display: grid;
+        text-align: center;
+    }
+    
+    .third_movie, .fourth_movie
+    {
+        visibility: hidden;
+        height: 0;
+        margin: 0;
+    }
+
+    .title_h2:before,
+    .title_h2:after 
+    {
+        width: 90px;
+    }
+
+}
+
+@media screen and (max-width: 1023px) and (min-width: 768px)
+{
+    .top_grid_block
+    {   
+        grid-template-columns: auto auto;
+        grid-template-areas:
+        " menu_block "
+        " background_block ";
+    }
+
+    .menu_main
+    {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .menu_main_li
+    {
+        display: block;
+        width: auto;
+    }
+
+    .about_me_icon
+    { 
+        width: 24px;
+    }
+
+    .heart_icon
+    {
+        width: 24;
+    }
+
+    .video_icon
+    {
+        width: 24;
+    }
+
+    .background_block
+    {
+        display: grid;  
+       grid-column-gap: 3%;
+       grid-template-rows: auto auto auto;
+       grid-template-areas:
+       " main_block main_block main_block"
+       " fav_info info info ";
+    }
+
+    .main_block
+    {   
+        display: grid;  
+        /*grid-template-columns: 45% 45%;
+        grid-template-rows: auto;
+        grid-column-gap: 4%;*/
+        grid-template-areas:
+        " top_block top_block quote";
+        justify-items: stretch;
+    }
+
+    .favourite_head
+    {
+        /*font: 600 24px/32px 'Open Sans', sans-serif, Verdana;*/
+        text-align: left;
+    }
+
+    .movies_block
+    {
+        display: contents;
+        flex-direction: row;
+        justify-content: flex-start;   
+    }
+
+    .movie
+    {
+        float: left;
+        width: 45%;
+        margin: 0 2.5%;
+    }
+
+    .movie_h3
+    {
+         font-size: 24px;
+         line-height: 18px;
+    }
+
+    .movie_p 
+    {
+         font-size: 18px;
+         line-height: 20px;
+    }
+
+    .movie_button
+    {
+        display: grid;
+        text-align: center;
+    }
+
+    .title_h2:before,
+    .title_h2:after 
+    {
+        width: 200px;
+    }
+}
+
+
+@media screen and (min-width: 1024px)
+{
+    .content
+    {
+        min-width: 900px;
+        max-width: 1200px;
+        margin: 0 3%;
+    }
+    
+    .top_grid_block
+    {   
+        grid-template-columns: auto auto;
+        grid-template-areas:
+        " menu_block "
+        " background_block ";
+    }
+
+    .menu_main
+    {
+        justify-items: flex-start; 
+        /*justify-content: space-between;*/
+        flex-direction: row;
+    }
+
+    .menu_main_li
+    {
+        display: block;
+        width: auto;
+    }
+
+    .about_me_icon
+    { 
+        width: 24px;
+    }
+
+    .heart_icon
+    {
+        width: 24;
+    }
+
+    .video_icon
+    {
+        width: 24;
+    }
+
+    .background_block
+    {
+        display: grid;  
+       grid-column-gap: 3%;
+       grid-template-rows: auto auto auto;
+       grid-template-areas:
+       " main_block main_block main_block"
+       " fav_info info info ";
+    }
+
+    .main_block
+    {   
+        display: grid;  
+        /*grid-template-columns: 45% 45%;
+        grid-template-rows: auto;
+        grid-column-gap: 4%;*/
+        grid-template-areas:
+        " top_block quote quote";
+        justify-items: stretch;
+        background-size: 100%;
+    }
+
+    .top_block
+    {
+        margin: 25% 0 0 5%;
+    }
+
+    .for_blockquote
+    {
+        margin-left: 15%;
+    }
+
+    .info
+    {
+        margin-top: -10%;
+    }
+
+    .movies_block
+    {
+        display: contents;
+        flex-direction: row;
+        justify-content: flex-start;   
+    }
+
+    .movie
+    {
+        float: left;
+        width: 22%;
+        margin: 0 1.5%;
+    }
+
+    .movie_h3
+    {
+         font-size: 24px;
+         line-height: 18px;
+    }
+
+    .movie_p 
+    {
+         font-size: 18px;
+         line-height: 20px;
+    }
+
+    .movie_button
+    {
+        display: grid;
+        text-align: center;
+        width: 300px;
+        margin: auto;
+    }
+
+    .form_block
+    {
+        margin: auto;
+        margin-top: 90px;
+    }
+
+    .title 
+    {
+        margin: auto;
+    }
+
+    .title_h2:before,
+    .title_h2:after 
+    {
+        width: 200px;
+    }
+
+    .form_style
+    {
+        width: 540px;
+        margin: auto;
+    }
+
+    .label_first, .input_field, .label_second, .radio_label, .option_style
+    {
+        font: 400 24px/28px 'Open Sans', sans-serif, Verdana;
+    }
+
+    .label_first, .label_second, .radio_label
+    {
+        text-align: left;  
+    }
+
+    .label_second
+    {
+        margin-bottom: 5px;
+    }
+
+    .center_radio
+    {
+        display: flex;
+        justify-content: flex-start;    
+    }
+
+    .radio_button
+    {
+        margin: 6px 1% 0 0;
+        width: 16px;
+        height: 16px;           
+    }
+
+    .form_button
+    {
+        float: left;
+        width: 220px;
+        padding: 10px 0 10px 0;
+        font: 24px/28px Georgia, sans-serif, Verdana;  
+    }
+
+    .footer_p
+    {
+        font: 20px/24px Georgia, Verdana;
+    }
+}
+
+@media screen and (min-width: 1300px)
+{
+    .content
+    {
+        margin: auto;
+    }
+
+    .movie_button
+    {
+        width: 320px;
+    }
+
+}
+

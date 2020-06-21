@@ -1,0 +1,27 @@
+.form_answer
+{   
+    display: block;
+    padding: 0; 
+    margin: 0 0 0 80px; 
+    width: 220px; 
+    text-align: center; 
+    font: 16px/1.8 Georgia; 
+}
+
+.error_fields
+{
+    margin: 0 0 0 80px;
+    padding: 0 0 0 30px;
+    font: 16px/1.8 Georgia; 
+    color: #e85723;
+}
+
+.error
+{
+    color: #e85723;
+}
+
+.success
+{
+    color: #15a98c;
+}

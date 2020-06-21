@@ -1,0 +1,208 @@
+﻿.form_block
+{
+    /*width: 780px;*/
+    margin: 10% 0 5% 0;
+    display: flex;
+    /*position: relative;*/
+    flex-direction: column;
+    justify-content: flex-start;     
+    justify-content: space-between; 
+}
+
+.form_value
+{
+    list-style: none;
+    margin: 0px 0 0px;
+    padding: 0px 0 0px;
+    text-align: left;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.title 
+{
+    margin-bottom: 3%;
+    text-align: center; 
+    /*float: left;*/
+}
+
+.title_h2
+{
+    font: 400 28px/32px 'Open Sans', sans-serif, Verdana;
+    color: #333333;
+    width: 100%;
+    text-align: center; 
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.title_h2:before,
+.title_h2:after 
+{
+    content: ""; /*иначе псевдоэлементы не появятся на сайте */
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 1px;
+    background-color: #333333;
+    position: relative; /* Добавляем пседоэлемантам возможность изменить позицию линии, для создания отступов от текста */
+    opacity: 0.5;
+    margin-top: -5px;
+}
+
+.title_h2:before 
+{
+    margin-left: -100%;
+    left: -22px;
+}
+
+.title_h2:after 
+{
+    margin-right: -100%;
+    right: -22px;
+}
+
+.label_first
+{
+    font: 400 28px/32px 'Open Sans', sans-serif, Verdana;
+    color: #333;
+    text-align: center;
+}
+
+.label_first:after
+{
+    color: red;
+    content: " *";
+}
+
+.label_second
+{
+    font: 400 28px/32px 'Open Sans', sans-serif, Verdana;
+    color: #333;
+    text-align: center;
+}
+
+.radio_label
+{
+    font: 400 26px/30px 'Open Sans', sans-serif, Verdana;
+    color: #333;
+    margin: 0 3% 0 0;
+}
+
+.radio_button
+{
+    margin: 1.5% 1% 0 0;
+    width: 20px;
+    height: 20px;           
+}
+
+.center_radio
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;    
+}
+.form_style
+{
+    /*width: 540px;*/
+    margin: 0;
+    /*padding-left: 8px;*/
+}
+
+.form_margin_between
+{
+    margin-bottom: 25px;
+}
+
+.input_field
+{
+    margin-top: 4px;
+    /*width: 500px; *//* Ширина поля с учетом padding */
+    /*height: 43px; *//* Высота */
+    border: 2px solid #c9c9c9;
+    font: 400 28px/32px 'Open Sans', sans-serif, Verdana;
+    color: #555555;
+    padding: 1px 18px;
+    border-radius: 3px;
+}
+
+.input_field:focus
+{
+    background-color: #c9c9c9;
+    border: 2px solid #15a98c;
+    border-radius: 3px;
+}
+
+.new_select_style
+{
+    border: 2px solid #a6a6a6;
+    overflow: hidden; 
+   /* height: 46px;*/
+    background: url('../images/arrow_down.png') no-repeat right #FFF;
+    background-position: 97%;
+    /*width: 535px;*/
+    margin-right: 20px; 
+    border-radius: 3px;
+}
+
+.new_select_style_select
+{
+    border-radius: 0;
+    background: transparent;
+   /* height: 46px;*/
+    padding: 5px 5px 5px 18px;
+    border: 0;
+    line-height: 1;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /*width: 535px;*/
+    color: #555555;
+    font: 400 24px/32px 'Open Sans', sans-serif, Verdana;
+}
+
+.option_style
+{
+    color: #555555;
+    font: 400 24px/32px 'Open Sans', sans-serif, Verdana;
+}
+
+.margin_radio
+{
+    margin: 5% 0 5% 0;
+}
+
+.for_textarea
+{
+    margin-top: 3px;
+    border: 2px solid #c9c9c9;
+    color: #555555;
+    font: 400 26px/30px 'Open Sans', sans-serif, Verdana;
+   /* width: 532px;
+    height: 142px;*/
+    /*resize: none;*/
+    border-radius: 3px;
+}
+
+.form_button
+{
+    margin: 5% 0 2% 0;
+    font: 26px/30px Georgia, sans-serif, Verdana;  
+    color: #f5f5f5;
+    /*width: 220px;
+    height: 50px;*/
+    border-radius: 5px;
+    background-color: #15a98c;
+    text-align: center;
+    border: none;
+    /*float: left;*/
+    width: 100%;
+    padding: 15px 0 15px 0;
+}
+
+.form_button:hover
+{
+    background-color: #098d71;
+}

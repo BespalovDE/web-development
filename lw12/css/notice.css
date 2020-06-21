@@ -1,0 +1,15 @@
+.notice
+{
+    width: 138px;
+    background: url('../images/for_notice.png') no-repeat;
+    float: left;
+    margin: 32px 0 0 32px;
+    padding: 0 0 0 40px;
+    font: normal normal 14px/16px roboto;
+    color: #2e2b2b;   
+}
+
+.error
+{
+    border: 2px solid #f00;
+}
