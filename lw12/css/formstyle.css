@@ -1,9 +1,7 @@
 ﻿.form_block
 {
-    /*width: 780px;*/
     margin: 10% 0 5% 0;
     display: flex;
-    /*position: relative;*/
     flex-direction: column;
     justify-content: flex-start;     
     justify-content: space-between; 
@@ -25,7 +23,6 @@
 {
     margin-bottom: 3%;
     text-align: center; 
-    /*float: left;*/
 }
 
 .title_h2
@@ -41,13 +38,13 @@
 .title_h2:before,
 .title_h2:after 
 {
-    content: ""; /*иначе псевдоэлементы не появятся на сайте */
+    content: "";
     display: inline-block;
     vertical-align: middle;
     width: 20px;
     height: 1px;
     background-color: #333333;
-    position: relative; /* Добавляем пседоэлемантам возможность изменить позицию линии, для создания отступов от текста */
+    position: relative; 
     opacity: 0.5;
     margin-top: -5px;
 }
@@ -82,6 +79,7 @@
     font: 400 28px/32px 'Open Sans', sans-serif, Verdana;
     color: #333;
     text-align: center;
+    margin-bottom: 2%;
 }
 
 .radio_label
@@ -106,9 +104,7 @@
 }
 .form_style
 {
-    /*width: 540px;*/
     margin: 0;
-    /*padding-left: 8px;*/
 }
 
 .form_margin_between
@@ -119,8 +115,6 @@
 .input_field
 {
     margin-top: 4px;
-    /*width: 500px; *//* Ширина поля с учетом padding */
-    /*height: 43px; *//* Высота */
     border: 2px solid #c9c9c9;
     font: 400 28px/32px 'Open Sans', sans-serif, Verdana;
     color: #555555;
@@ -139,11 +133,8 @@
 {
     border: 2px solid #a6a6a6;
     overflow: hidden; 
-   /* height: 46px;*/
     background: url('../images/arrow_down.png') no-repeat right #FFF;
     background-position: 97%;
-    /*width: 535px;*/
-    margin-right: 20px; 
     border-radius: 3px;
 }
 
@@ -151,14 +142,12 @@
 {
     border-radius: 0;
     background: transparent;
-   /* height: 46px;*/
     padding: 5px 5px 5px 18px;
     border: 0;
     line-height: 1;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    /*width: 535px;*/
     color: #555555;
     font: 400 24px/32px 'Open Sans', sans-serif, Verdana;
 }
@@ -180,9 +169,6 @@
     border: 2px solid #c9c9c9;
     color: #555555;
     font: 400 26px/30px 'Open Sans', sans-serif, Verdana;
-   /* width: 532px;
-    height: 142px;*/
-    /*resize: none;*/
     border-radius: 3px;
 }
 
@@ -191,13 +177,10 @@
     margin: 5% 0 2% 0;
     font: 26px/30px Georgia, sans-serif, Verdana;  
     color: #f5f5f5;
-    /*width: 220px;
-    height: 50px;*/
     border-radius: 5px;
     background-color: #15a98c;
     text-align: center;
     border: none;
-    /*float: left;*/
     width: 100%;
     padding: 15px 0 15px 0;
 }

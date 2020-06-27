@@ -1,24 +1,16 @@
 body 
 {
-    /*height: 100%;*/
     max-width: 1920px;
     margin: 0px;
 }
 
 .all_page
 {
-	/*display: flex;
-	flex-direction: row;
-    min-height: 100%;*/
     margin: 0 auto;
 }
 
 .content 
 {
-    /*flex: 1 0 auto;
-    display: flex;
-    flex-direction: row;*/
-    /*flex-flow: row wrap-reverse;*/
     justify-content: center;
     margin: 0 5% 0 5%;
     max-width: 961px;
@@ -28,10 +20,6 @@ body
 .background_block
 {
     grid-area: background_block;
-    /*background-image: url('../images/Kosmos.jpg') no-repeat, center top;*/
-    /*background-repeat: no-repeat;
-    background-position: center top;
-    background-size: auto 26%;*/
 }
 
 .main_block
@@ -40,20 +28,9 @@ body
     background-size: cover;
     grid-area: main_block;
 }
-/*
-.menu_block
-{
-    margin: auto;
-    margin-top: 0px;
-    width: 1000px;
-}*/
 
 .top_block
 {
-    /*margin: 0 auto 47px auto;*/
-    /*padding-top: 208px;*/
-    /*width: 960px;
-    height: 350px;*/
     grid-area: top_block;
 } 
 
@@ -87,7 +64,6 @@ body
 {
     float: left;
     background: #fff;
-    /*width:330px;*/
     margin-top: 12%; 
     grid-area: fav_info;
 }
@@ -97,28 +73,21 @@ body
     font: 19px Georgia, Verdana;
     color: #555;
     line-height: 36px;
-    /*margin-top: 12px; */
     padding-left: 10%;
-    position: relative;
-    /*left: 5px;*/
-    
+    position: relative;   
 }
 
 .list_next
 {
-    /*padding-left: 18px;*/
     left: 0px;
 }
 
 .info
 {
-    /*width: 570px;*/
     float: right; 
     background: none;
-    /*margin: -174px 20px 0 30px;*/
     position: relative;
     display: block;
-    /*left: 15px;*/
     grid-area: info;
     padding-top: 3%;
 }
@@ -142,6 +111,7 @@ body
     font: 400 36px/42px 'Open Sans', sans-serif, Verdana;
     color: #333;
     margin: 0px 0px 16px 1px;
+    text-align: center;
 }
 
 .favourite_head
@@ -159,21 +129,16 @@ body
     height: 6px;
     background:#15a98c;
     border-radius: 5px;
-    margin-top: 0px;
-    margin-left: 5px;
+    margin: auto;
     float: center;
 }
 
 .quote
 {
-    /*width: 570px;
-    height: 350px;*/
     float: right; 
     background-image: url('../images/comma.png');
     background-repeat: no-repeat;
     background-size: 0px 0px;
-    /*position: relative;*/
-    /*margin-right: 20px; */
     grid-area: quote;
 }
 
@@ -199,16 +164,6 @@ body
     display: block;
     position: relative;
 }
-/*
-.arrow:after
-{
-    font: 20px/32px Georgia, Verdana;
-    content: ' →';
-    display: block;
-    position: absolute;
-    top: 15%;
-    left: 33%;
-}*/
 
 .margin_top_10
 {
@@ -242,7 +197,7 @@ body
 
 .footer_p
 {
-    font: 24px/28px Georgia, Verdana;
+    font: 12px/16px Georgia, Verdana;
     color: #555;
     margin: auto;
     text-align: center;
